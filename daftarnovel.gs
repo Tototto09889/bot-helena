@@ -4,298 +4,434 @@
 // Nilai setiap properti adalah array objek, dengan setiap objek merepresentasikan satu novel.
 // Struktur objek novel:
 //   judul: Judul lengkap novel (untuk ditampilkan di menu)
-//   keyword: Kata kunci untuk pencarian inline (gunakan huruf kecil, tanpa spasi, kata pertama judul)
+//   keyword: Kata kunci untuk pencarian inline (gunakan huruf kecil, tanpa spasi)
 //   genre: Genre novel (untuk deskripsi singkat)
 //   sinopsis: Sinopsis singkat novel (untuk deskripsi lebih detail)
 
 const daftarNovel = {
-  "#": [
-    {
-      judul: "10-nen Goshi no HikiNEET o Yamete, Gaishutsushitara Jitaku goto Isekai ni Ten'ishiteta Bahasa Indonesia",
-      keyword: "10-nen",
-      genre: "Isekai, Fantasy",
-      sinopsis: "Kamar tidurku terhubung ke dunia lain!? Tiba-tiba rumah kontrakan NEET berusia 30 tahun itu berpindah ke dunia lain."
-    }
-  ],
   "A": [
     {
-      judul: "Ankoku Kishi Monogatari ~Yuusha wo Taosu Tameni Maou ni Shoukansaremashita~ Bahasa Indonesia",
-      keyword: "ankoku",
-      genre: "Fantasy, Action, Adventure",
-      sinopsis: "Dunia fantasi yang diperintah oleh raja iblis dan pahlawan. Ksatria Kegelapan dipanggil ke dunia lain untuk mengalahkan pahlawan!?"
-    },
-    {
-      judul: "Ankoku Kishi to Issho! Bahasa Indonesia",
-      keyword: "ankoku",
-      genre: "Comedy, Fantasy, Slice of Life",
-      sinopsis: "Menceritakan kehidupan sehari-hari yang lucu dari Ksatria Kegelapan yang kikuk dan gadis gothic kecil yang kesepian."
-    },
-    {
-      judul: "Arifureta Shokugyou De Sekai Saikyou Bahasa Indonesia",
+      judul: "Arifureta: From Commonplace to World's Strongest",
       keyword: "arifureta",
       genre: "Isekai, Action, Fantasy",
       sinopsis: "Di dunia fantasi yang kejam, Hajime Nagumo dan teman-teman sekelasnya dipanggil sebagai pahlawan. Namun, Hajime mendapati dirinya sebagai yang terlemah dan dikhianati oleh teman-temannya. Terjatuh ke dalam jurang keputusasaan, Hajime harus berjuang untuk bertahan hidup dan menjadi yang terkuat untuk kembali ke rumah."
     },
     {
-      judul: "Ashita, Boku wa Shinu. Kimi wa Ikikaeru. Bahasa Indonesia",
-      keyword: "ashita",
-      genre: "Drama, Romance, School, Supernatural",
-      sinopsis: "Aku pasti akan mati besok, dan kamu akan hidup kembali —. Murid SMA kelas dua, Shiro Nagai, memiliki kekuatan untuk melihat 'besok' orang lain. Suatu hari, dia melihat 'besok' dari teman masa kecilnya, Haruna Rikka, dan mengetahui bahwa dia akan mati karena kecelakaan yang tidak masuk akal. Untuk mengubah 'besok' Haruna, Shiro menggunakan kekuatannya."
+      judul: "Attack on Titan",
+      keyword: "attackontitan",
+      genre: "Action, Dark Fantasy, Post-apocalyptic",
+      sinopsis: "Dalam dunia yang dikuasai oleh Titan raksasa pemakan manusia, umat manusia berjuang untuk bertahan hidup di balik tembok-tembok raksasa. Eren Yeager dan teman-temannya bergabung dengan Survey Corps untuk melawan Titan dan mengungkap misteri dunia mereka yang mengerikan."
+    },
+    {
+      judul: "Assassination Classroom",
+      keyword: "assassinationclassroom",
+      genre: "Action, Comedy, School",
+      sinopsis: "Ketika makhluk misterius menghancurkan sebagian bulan dan mengancam Bumi dengan nasib yang sama, kelas 3-E SMP Kunugigaoka diberi misi mustahil: membunuh makhluk tersebut, yang menjadi guru wali kelas mereka, sebelum akhir tahun ajaran."
+    },
+    {
+      judul: "Another",
+      keyword: "another",
+      genre: "Horror, Mystery, Thriller",
+      sinopsis: "Kouichi Sakakibara pindah ke SMP Yomiyama Utara dan menemukan suasana kelas 3-3 yang aneh dan menakutkan. Terikat oleh kutukan misterius yang melibatkan kematian siswa dan guru di masa lalu, Kouichi dan teman-temannya berusaha mengungkap kebenaran di balik teror yang menghantui kelas mereka."
     }
   ],
   "B": [
     {
-      judul: "Battle Divas Bahasa Indonesia",
-      keyword: "battle",
-      genre: "Action, Ecchi, Fantasy, Harem",
-      sinopsis: "Di benua yang luas dan beragam di Azure, tempat pedang dan sihir berkuasa, banyak ras hidup berdampingan meskipun ada konflik dan kekacauan yang terus-menerus. Di antara mereka, manusia, dengan kecerdasan dan kebijaksanaan mereka, orc dengan kekuatan fisik yang besar, beastkin yang diberkati dengan indra yang luar biasa, peri yang mahir dalam sihir dan seni, dan kurcaci yang bangga dengan keahlian mereka, masing-masing berkembang di wilayah mereka sendiri, membentuk lima negara besar yang dikenal sebagai Lima Bangsa Besar."
-    },
-    {
-      judul: "Berserk of Gluttony Bahasa Indonesia",
-      keyword: "berserk",
+      judul: "Berserk of Gluttony",
+      keyword: "berserkofgluttony",
       genre: "Dark Fantasy, Action, Isekai",
       sinopsis: "Fate Graphite dihina karena skill 'Gluttony' yang dianggap tidak berguna, yang hanya membuatnya merasa lapar. Namun, dia menemukan bahwa skill tersebut memiliki kekuatan tersembunyi: Gluttony dapat melahap jiwa makhluk yang dibunuh dan mengambil kekuatan mereka. Dengan kekuatan baru ini, Fate memulai perjalanan berbahaya untuk mengubah takdirnya dan melindungi orang-orang yang dicintainya."
     },
     {
-      judul: "Bofuri Bahasa Indonesia",
-      keyword: "bofuri",
-      genre: "Sci-Fi, Slice of Life",
-      sinopsis: "Karena sahabatnya, Risa Shiramine dengan paksa menyeretnya untuk bermain game VRMMORPG NewWorld Online, Kaede Honjou yang tidak menyukai rasa sakit sama sekali memilih untuk mengalokasikan semua poin statusnya ke VIT. Akibatnya, dia menjadi bergerak lambat, tidak bisa menggunakan sihir, dan bahkan tidak bisa melompat, dia mendapatkan julukan 'Benteng Hidup' yang tidak terduga, tetapi ternyata dia memiliki skill 'Pertahanan Absolut' yang merupakan skill yang sangat kuat…?"
+      judul: "Black Clover",
+      keyword: "blackclover",
+      genre: "Action, Fantasy, Magic",
+      sinopsis: "Di dunia di mana sihir adalah segalanya, Asta lahir tanpa kekuatan sihir sama sekali. Meskipun demikian, Asta bercita-cita menjadi Kaisar Sihir terhebat. Dengan semangat pantang menyerah dan kekuatan anti-sihir yang misterius, Asta dan teman-temannya dari Black Bulls berjuang melawan berbagai ancaman untuk melindungi kerajaan mereka."
     },
     {
-      judul: "Boku no Kanojo Sensei Bahasa Indonesia",
-      keyword: "boku",
-      genre: "Comedy, Romance, School",
-      sinopsis: "“Aku akan menjadikanmu pacarku, sebagai hukuman karena telah melihatku dalam keadaan yang memalukan!” Karena suatu alasan, Yoshio bertemu dengan wali kelasnya yang cantik, Hayama Kana, dalam keadaan yang memalukan di toilet sekolah dan dipaksa untuk berpacaran dengannya!? Selain itu, Natsukawa Shiho, teman masa kecil Yoshio, juga ikut campur dalam hubungan mereka…!?"
+      judul: "Bleach",
+      keyword: "bleach",
+      genre: "Action, Supernatural, Shounen",
+      sinopsis: "Ichigo Kurosaki, seorang siswa SMA yang memiliki kemampuan melihat hantu, tiba-tiba menjadi Soul Reaper setelah bertemu dengan Rukia Kuchiki. Ichigo kemudian terlibat dalam dunia roh dan harus berjuang melawan Hollows jahat serta melindungi teman dan keluarganya."
+    },
+    {
+      judul: "Boruto: Naruto Next Generations",
+      keyword: "boruto",
+      genre: "Action, Adventure, Fantasy",
+      sinopsis: "Boruto Uzumaki, putra Hokage Naruto, memasuki Akademi Ninja untuk menempa jalannya sendiri. Meskipun berbakat, Boruto merasa terbebani oleh bayang-bayang ayahnya dan berusaha membuktikan kemampuannya sendiri sambil menghadapi ancaman baru yang muncul di dunia ninja yang damai."
     }
   ],
   "C": [
-    {
-      judul: "Campione! Bahasa Indonesia",
-      keyword: "campione",
-      genre: "Action, Fantasy, Harem, Romance, Supernatural",
-      sinopsis: "Ketika Kusanagi Godou berhasil mengalahkan dewa perang, dia menjadi Campione! Sekarang dia harus menghadapi dewa-dewa yang tidak patuh yang menyebabkan masalah di sekitarnya."
-    },
-    {
-      judul: "Chitose-kun wa Ramune Bin no Naka Bahasa Indonesia",
-      keyword: "chitose-kun",
-      genre: "Romance, School",
-      sinopsis: "Dikelilingi oleh pacar-pacar yang tak terhitung jumlahnya, Saku Chitose menduduki posisi populer kelas-S yang tak tergoyahkan di sekolah. Dia menyadari bahwa dia 'memahami' mereka. Dia pikir, karena dia tahu bahwa 'kebosanan adalah racun terbesar,' bahwa 'hal-hal yang menyenangkan selalu benar,' dan bahwa dia spesial, berbeda dari orang lain di sekitar— Namun, apakah dia benar-benar 'memahami' mereka?"
-    },
-    {
-      judul: "Choppiri Toshiue Demo Kanojo ni Shite Kuremasu ka? Bahasa Indonesia",
-      keyword: "choppiri",
-      genre: "Comedy, Romance",
-      sinopsis: "“Apakah kamu tidak keberatan jika aku sedikit lebih tua?” Suatu hari, Kouki Sakuraba dipanggil oleh kecantikan dewasa yang bekerja di toko serba ada tempat dia bekerja paruh waktu dan diminta untuk menjadi pacarnya…! Dihadapkan dengan pengakuan cinta yang tiba-tiba dari wanita dewasa yang lebih tua, Kouki, yang tidak berpengalaman dalam cinta, menjadi bingung. Namun, saat dia berinteraksi dengan wanita itu, dia mulai tertarik padanya…"
-    },
-    {
-      judul: "Chounin A wa Akuyaku Reijou wo Doushitemo Sukuitai Bahasa Indonesia",
-      keyword: "chounin",
-      genre: "Fantasy, Romance, Isekai",
-      sinopsis: "Seorang pria bereinkarnasi menjadi karakter figuran, penduduk desa A. Namun, target yang harus dia selamatkan adalah penjahat wanita yang ditakdirkan untuk kehancuran!? Ini adalah kisah tentang seorang pria biasa yang berjuang untuk menyelamatkan penjahat wanita itu meskipun dia adalah karakter figuran!"
-    },
      {
-      judul: "Classroom of the Elite Bahasa Indonesia",
-      keyword: "classroom",
+      judul: "Classroom of the Elite",
+      keyword: "classroomelite",
       genre: "Psychological, School, Slice of Life",
       sinopsis: "Kiyotaka Ayanokoji memasuki SMA Tokyo Metropolitan Advanced Nurturing, sekolah elit yang menjanjikan masa depan cerah. Namun, dia ditempatkan di Kelas D, kelas buangan yang berisi siswa-siswa bermasalah. Di sana, Kiyotaka harus menggunakan kecerdasan dan kelicikannya untuk bertahan hidup dan naik ke puncak sekolah."
+    },
+    {
+      judul: "Code Geass",
+      keyword: "codegeass",
+      genre: "Mecha, Military, Sci-Fi",
+      sinopsis: "Diperbudak oleh Kekaisaran Britannia, Jepang (sekarang Area 11) menjadi medan pertempuran antara pemberontak dan penguasa. Lelouch Lamperouge, seorang siswa yang menyimpan dendam terhadap Britannia, mendapatkan kekuatan misterius bernama Geass. Dengan kekuatan ini, Lelouch memulai pemberontakan untuk menghancurkan Britannia dan menciptakan dunia yang lebih baik untuk adiknya."
+    },
+    {
+      judul: "Charlotte",
+      keyword: "charlotte",
+      genre: "Superpower, School, Drama",
+      sinopsis: "Yu Otosaka adalah seorang remaja yang memiliki kemampuan mencuri tubuh orang lain selama 5 detik. Dia menggunakan kekuatannya untuk keuntungan pribadi sampai bertemu dengan Nao Tomori, ketua OSIS yang misterius. Nao mengungkap keberadaan lebih banyak remaja dengan kekuatan supernatural dan mengajak Yu untuk bergabung dalam misi melindungi mereka dari eksploitasi."
     }
   ],
   "D": [
     {
-      judul: "Danjo no Yuujou wa Seiritsu suru? (Iya, Shinai!!) Bahasa Indonesia",
-      keyword: "danjo",
-      genre: "Comedy, Romance, School",
-      sinopsis: "“—Aku menyukaimu sebagai teman, tentu saja!” Teman sebangku di kelas, Yu Izumi, mengatakan ini kepada Himari Hinase dengan wajah tersenyum cerah. Namun, jarak antara mereka terlalu dekat, dan dia terus-menerus menggodanya, membuatnya bingung. Apakah persahabatan antara pria dan wanita itu mungkin? Tidak, tidak mungkin! Tapi, mungkin ada pengecualian untuk kita!?"
+      judul: "Death Note",
+      keyword: "deathnote",
+      genre: "Mystery, Police, Psychological, Supernatural, Thriller",
+      sinopsis: "Light Yagami, seorang siswa SMA jenius, menemukan Death Note, buku catatan kematian milik Shinigami. Dengan Death Note, Light dapat membunuh siapa pun hanya dengan menulis nama mereka di buku tersebut. Terobsesi untuk menciptakan dunia tanpa kejahatan, Light memulai aksinya sebagai 'Kira', hakim dunia baru yang misterius, dan berhadapan dengan detektif jenius L."
     },
     {
-      judul: "Date Alive Bahasa Indonesia",
-      keyword: "date",
-      genre: "Action, Comedy, Harem, Mecha, Romance, Sci-Fi",
-      sinopsis: "Itsuka Shido adalah anak sekolah menengah biasa sampai dia bertemu dengan seorang gadis misterius. Ternyata, gadis itu adalah roh, makhluk dari dunia lain, yang penampilannya menyebabkan gempa dahsyat. Shido ditugaskan untuk menyegel roh-roh itu dan menyelamatkan umat manusia."
+      judul: "Demon Slayer",
+      keyword: "demonslayer",
+      genre: "Action, Demons, Historical, Supernatural",
+      sinopsis: "Di Jepang era Taisho, Tanjiro Kamado kembali ke rumah dan menemukan keluarganya dibantai oleh iblis, dan satu-satunya yang selamat adalah adiknya, Nezuko, yang telah berubah menjadi iblis. Untuk menyembuhkan Nezuko dan membalaskan dendam keluarganya, Tanjiro bergabung dengan Korps Pembasmi Iblis dan memulai perjalanan berbahaya melawan iblis."
     },
     {
-      judul: "Disciple of the Lich: Or How I Was Cursed by the Gods and Dropped Into the Abyss! Bahasa Indonesia",
-      keyword: "disciple",
-      genre: "Adventure, Fantasy",
-      sinopsis: "Seorang pemuda terbangun di dasar jurang yang dikenal sebagai Abyss. Dia tidak memiliki ingatan, tidak tahu mengapa dia ada di sana, atau bahkan siapa namanya. Yang dia tahu hanyalah sebuah suara di kepalanya yang terus-menerus mengejeknya dan mengatakan bahwa dia dikutuk oleh para dewa."
-    },
-    {
-      judul: "Dokuzetsu Kuudere Bishoujo Bahasa Indonesia",
-      keyword: "dokuzetsu",
-      genre: "Comedy, Romance",
-      sinopsis: "“Menjijikkan.” “Bodoh.” “Menghilang saja.” Beginilah caraku diperlakukan oleh gadis tercantik di sekolah, Aoya Yuzuki. Meskipun kata-katanya kasar, terkadang dia tersipu dan terkadang dia panik? Aku tidak tahu apa yang dia pikirkan! Tapi, entah bagaimana, sepertinya dia menyukaimu...?"
-    },
-    {
-      judul: "Dungeon Battle Royale ~ Since I Became a Demon King, I Will Aim for World Domination Bahasa Indonesia",
-      keyword: "dungeon",
-      genre: "Action, Fantasy, Harem",
-      sinopsis: "Setelah bereinkarnasi menjadi Raja Iblis terlemah, saya memutuskan untuk menaklukkan dunia dengan Dungeon yang diberikan kepada saya sebagai cheat!"
-    },
-    {
-      judul: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Bahasa Indonesia",
-      keyword: "dungeon",
+      judul: "DanMachi (Is It Wrong to Try to Pick Up Girls in a Dungeon?)",
+      keyword: "danmachi",
       genre: "Action, Adventure, Comedy, Fantasy, Romance",
       sinopsis: "Di kota Orario, para petualang menjelajahi Dungeon, labirin bawah tanah berbahaya yang penuh monster dan harta karun. Bell Cranel, seorang petualang pemula, bertemu dengan dewi Hestia dan memulai petualangannya di Dungeon dengan harapan menjadi petualang terhebat dan menemukan cinta."
-    },
-    {
-      judul: "Dungeon no Nai Sekai de 【Incompetent Skill “Dungeon Nai Ten'i”】 ga Kakusei Shita Kekka, Subete Saikyou e to Tsuujiteita Ken: Level Up wa Jinsei wo Kaeta Bahasa Indonesia",
-      keyword: "dungeon",
-      genre: "Action, Adventure, Fantasy",
-      sinopsis: "Manusia yang terbangun dengan keterampilan yang tidak kompeten 【Transfer Tanpa Dungeon】 telah mencapai yang terkuat. Ini adalah kisah tentang seorang anak laki-laki bernama Yuuto yang, meskipun memiliki keterampilan yang tidak berguna, menjadi yang terkuat di dunia tanpa dungeon."
     }
   ],
   "E": [
     {
-      judul: "Ecstas Online Bahasa Indonesia",
-      keyword: "ecstas",
-      genre: "Action, Adventure, Fantasy, Sci-Fi",
-      sinopsis: "Protagonis kita suatu hari menemukan dirinya di dunia yang berbeda. Dunia tempat game VRMMORPG populer, Ecstas Online, menjadi kenyataan. Lebih buruk lagi, dia menjadi salah satu monster terlemah di dunia, Goblin."
+      judul: "Erased",
+      keyword: "erased",
+      genre: "Mystery, Psychological, Supernatural, Thriller",
+      sinopsis: "Satoru Fujinuma memiliki kemampuan 'Revival', yang membuatnya dapat kembali ke masa lalu untuk mencegah kejadian buruk. Ketika ibunya terbunuh, Satoru terlempar kembali ke masa lalu, ke masa kecilnya sebelum teman-teman sekelasnya menjadi korban pembunuhan berantai. Satoru harus menggunakan Revival untuk mengungkap pelaku sebenarnya dan mengubah masa depan."
     },
     {
-        judul: "Eighty-Six (Delapan-Enam) – 86 Bahasa Indonesia",
-        keyword: "eighty-six",
+        judul: "Eighty-Six",
+        keyword: "eightysix",
         genre: "Action, Military, Sci-Fi, Drama",
         sinopsis: "Republik San Magnolia berperang melawan Kekaisaran Giadian yang menggunakan drone otomatis 'Legion'. Namun, di balik propaganda kemenangan, terdapat kenyataan pahit: Eighty-Six, distrik ke-86 yang tidak diakui sebagai manusia, dipaksa untuk berperang sebagai umpan meriam. Shinei Nouzen, seorang Eighty-Six yang selamat, memimpin pasukan Spearhead dalam misi bunuh diri melawan Legion."
-    },
-    {
-      judul: "Eromanga Sensei Bahasa Indonesia",
-      keyword: "eromanga",
-      genre: "Comedy, Romance, Slice of Life",
-      sinopsis: "Masamune Izumi, seorang siswa SMA dan novelis ringan, harus hidup bersama adik tirinya, Sagiri Izumi, yang merupakan seorang hikikomori. Sagiri tidak pernah keluar dari kamarnya selama setahun terakhir dan memaksa Masamune untuk melakukan semua pekerjaan rumah. Selain itu, Masamune menyadari bahwa ilustrator anonim untuk novel ringannya, 'Eromanga Sensei', tidak lain adalah adik tirinya sendiri!?"
-    },
-    {
-      judul: "Evil avalon Bahasa Indonesia",
-      keyword: "evil",
-      genre: "Action, Adventure, Ecchi, Fantasy, Harem",
-      sinopsis: "Manusia terkuat bereinkarnasi menjadi Raja Iblis terlemah!? Kehidupan kedua yang dimulai oleh mantan manusia terkuat sebagai Raja Iblis terlemah di dunia lain!!"
     }
   ],
   "F": [
     {
-      judul: "Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells Bahasa Indonesia",
-      keyword: "failure",
-      genre: "Fantasy, Isekai",
-      sinopsis: "Touka Mimori dan teman-teman sekelasnya dipanggil ke dunia lain sebagai pahlawan. Namun, Touka adalah yang terlemah di antara mereka dan dianggap tidak berguna. Dibuang oleh kerajaan, Touka harus berjuang untuk bertahan hidup di dunia yang kejam ini dengan kekuatannya yang 'gagal'."
+      judul: "Fate/stay night: Unlimited Blade Works",
+      keyword: "fatestaynightubw",
+      genre: "Action, Fantasy, Magic, Supernatural",
+      sinopsis: "Dalam Perang Cawan Suci, tujuh Master dan tujuh Servant bertarung untuk memperebutkan Cawan Suci yang mahakabul. Shirou Emiya, seorang siswa SMA yang bercita-cita menjadi pahlawan keadilan, tanpa sengaja terlibat dalam perang ini dan memanggil Saber sebagai Servant-nya. Bersama Saber, Shirou harus menghadapi musuh-musuh kuat dan mengungkap misteri di balik Perang Cawan Suci."
     },
-    {
-      judul: "Free Life Fantasy Online: Immortal Princess Bahasa Indonesia",
-      keyword: "free",
-      genre: "Adventure, Fantasy, Sci-Fi, Slice of Life",
-      sinopsis: "Protagonis adalah seorang NEET yang hidup dari pendapatan investasi. Suatu hari, dia menemukan informasi tentang game VR baru dan memutuskan untuk mencobanya. Game itu disebut [Free Life Fantasy Online], di mana kamu bisa melakukan apa saja sesukamu. Dia membuat karakter dan memulai petualangan di dunia yang berbeda."
-    },
-    {
-      judul: "Fushi no Kami Bahasa Indonesia",
-      keyword: "fushi",
-      genre: "Fantasy, Slice of Life, Supernatural",
-      sinopsis: "Seorang anak laki-laki bereinkarnasi ke dunia lain. Dia dilahirkan kembali sebagai cucu dari dewa yang dikenal sebagai Dewa Kematian. Nama anak laki-laki itu adalah Ash. Dia seharusnya menjalani kehidupan yang damai sebagai cucu dewa, tetapi kenyataannya—dia harus bekerja sangat keras setiap hari untuk bertahan hidup."
+     {
+        judul: "Fullmetal Alchemist: Brotherhood",
+        keyword: "fullmetalalchemistbrotherhood",
+        genre: "Action, Adventure, Fantasy",
+        sinopsis: "Dua saudara alkemis, Edward dan Alphonse Elric, melakukan kesalahan fatal dalam mencoba menghidupkan kembali ibu mereka dengan alkimia. Akibatnya, Alphonse kehilangan seluruh tubuhnya dan Edward kehilangan tangan kanannya. Untuk mengembalikan tubuh Alphonse dan menebus kesalahan mereka, mereka memulai perjalanan mencari Batu Bertuah legendaris."
     }
   ],
   "G": [
     {
-      judul: "Gakusen Toshi Asterisk Bahasa Indonesia",
-      keyword: "gakusen",
-      genre: "Action, Ecchi, Fantasy, Harem, Romance, Sci-Fi, School",
-      sinopsis: "Pada abad ke-20, kehancuran yang belum pernah terjadi sebelumnya—dikenal sebagai Invertia—menyerang planet ini. Karena bencana ini, tatanan dunia benar-benar hancur. Namun, dari dalam kehancuran, umat manusia telah memperoleh jenis kekuatan baru—Genestella. Kota академия, yang didirikan untuk Genestella generasi berikutnya, adalah 'Rikka'—juga dikenal sebagai Asterisk."
-    },
-    {
-      judul: "Garbage Brave: Isekai ni Shoukan Sare Suterareta Yuusha no Fukushuu Monogatari",
-      keyword: "garbage",
-      genre: "Action, Adventure, Fantasy, Isekai",
-      sinopsis: "Pahlawan itu—dibuang seperti sampah. Suatu hari, Kanbara Kanata dipanggil ke dunia lain bersama teman-teman sekelasnya. Di dunia yang berbeda, dia diberi gelar 'Pahlawan' dan diminta untuk mengalahkan Raja Iblis. Namun, Kanata, yang memiliki kemampuan terlemah, diperlakukan tidak kompeten dan dibuang ke tempat yang disebut 'Lahan Terbuang' sendirian."
-    },
-    {
-      judul: "Genjitsu Shugi Yuusha no Oukoku Saikenki Bahasa Indonesia",
-      keyword: "genjitsu",
-      genre: "Fantasy, Isekai, Romance",
-      sinopsis: "“Oh, Pahlawan!” Kazuya Souma dipanggil ke dunia lain untuk menjadi pahlawan. Akan tetapi, pahlawan versi Souma sangat berbeda dari tokoh pahlawan pada umumnya. Alih-alih bertualang, ia malah berencana untuk membangun kembali kerajaan dengan kebijakan ekonomi dan administrasi yang rasional. Souma yang akhirnya berhasil mendapatkan takhta kerajaan mulai menunjukkan bakatnya sebagai raja dengan mereformasi kerajaan selangkah demi selangkah."
-    },
-    {
-      judul: "Gimai Seikatsu Bahasa Indonesia",
-      keyword: "gimai",
-      genre: "Romance, Slice of Life",
-      sinopsis: "Karena pernikahan kembali orang tua mereka, siswa SMA Toujou Yuuta dan Ayase Saki tiba-tiba menjadi saudara tiri. Berdasarkan 'aturan keluarga saudara tiri,' yang mereka berdua pertimbangkan, mereka berjanji untuk menjaga jarak yang tepat dan tidak menjadi terlalu dekat satu sama lain. Awalnya, Yuuta dan Saki berusaha untuk hidup bersama sebagai keluarga tetapi tetap menjadi orang asing. Namun, saat mereka melewati hari-hari bersama di rumah yang sama, mereka secara bertahap mulai berubah menjadi sesuatu yang lebih dari sekadar keluarga."
-    },
-    {
-      judul: "Goblin Slayer Bahasa Indonesia",
-      keyword: "goblin",
+      judul: "Goblin Slayer",
+      keyword: "goblinslayer",
       genre: "Action, Dark Fantasy, Adventure",
       sinopsis: "Di dunia fantasi yang penuh dengan monster, Goblin Slayer adalah seorang petualang yang hanya fokus membasmi goblin. Setelah desa kampung halamannya dihancurkan oleh goblin, Goblin Slayer bersumpah untuk memusnahkan semua goblin di dunia dan melindungi umat manusia dari ancaman mereka."
+    },
+    {
+      judul: "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
+      keyword: "gate",
+      genre: "Action, Adventure, Fantasy, Military",
+      sinopsis: "Sebuah gerbang misterius muncul di Ginza, Tokyo, menghubungkan dunia modern dengan dunia fantasi yang penuh dengan monster dan kerajaan magis. Pasukan Bela Diri Jepang (JSDF) dikirim ke dunia fantasi untuk menyelidiki dan menjalin hubungan dengan penduduk dunia lain. Youji Itami, seorang otaku JSDF, memimpin pasukan JSDF dalam petualangan mereka di dunia fantasi yang penuh dengan bahaya dan keajaiban."
     }
   ],
   "H": [
     {
-      judul: "Hai to Gensou no Grimgar Bahasa Indonesia",
-      keyword: "hai",
-      genre: "Action, Adventure, Drama, Fantasy",
-      sinopsis: "Ketika Haruhito terbangun dalam kegelapan, dia tidak tahu di mana dia berada, mengapa dia ada di sana, dan dari mana asalnya. Di sekelilingnya ada beberapa pria dan wanita yang memiliki ingatan yang sama dan samar-samar tentang diri mereka sendiri. Meskipun demikian, dunia yang tidak pernah mereka kenal ini disebut Grimgar. Dalam dunia seperti game ini, Haruhito, untuk bertahan hidup, terpaksa membentuk party dengan orang lain, dan dari sana, kisah tentang Haruhito sebagai seorang prajurit magang dari kehidupan yang dipaksakan dimulai."
+      judul: "Hunter x Hunter",
+      keyword: "hunterxhunter",
+      genre: "Action, Adventure, Fantasy, Shounen",
+      sinopsis: "Gon Freecss bercita-cita menjadi Hunter, petualang elit yang berburu harta karun, monster, dan manusia. Untuk mencapai tujuannya, Gon mengikuti ujian Hunter yang sangat sulit dan bertemu dengan teman-teman baru seperti Killua, Kurapika, dan Leorio. Bersama-sama, mereka menghadapi berbagai tantangan dan mengungkap misteri dunia Hunter."
     },
     {
-      judul: "Hataraku Maou-sama! Bahasa Indonesia",
-      keyword: "hataraku",
-      genre: "Comedy, Fantasy, Romance",
-      sinopsis: "Raja Iblis Sadao hampir menaklukkan dunia ketika dia dikalahkan oleh Pahlawan dan terdampar di dunia lain—Tokyo modern. Untuk bertahan hidup dan menemukan jalan kembali ke Ente Isla, Sadao bekerja paruh waktu di MgRonald."
+      judul: "Haikyuu!!",
+      keyword: "haikyuu",
+      genre: "Comedy, School, Shounen, Sports",
+      sinopsis: "Shoyo Hinata, seorang siswa SMP pendek, terinspirasi untuk bermain voli setelah menonton pertandingan SMA di TV. Meskipun tidak memiliki tinggi badan yang ideal, Hinata memiliki semangat juang yang tinggi dan refleks yang luar biasa. Dia bergabung dengan klub voli SMA Karasuno dan bertekad untuk membawa timnya ke puncak nasional."
     },
     {
-      judul: "Hazure Skill [Guild Member] de, Jitsu wa Saikyou desu ~Toaru Ossan no VRMMO Katsudouki~ Bahasa Indonesia",
-      keyword: "hazure",
-      genre: "Action, Adventure, Fantasy, Sci-Fi",
-      sinopsis: "Seorang pria paruh baya biasa bernama Earth dipindahkan ke dunia lain dan menjadi seorang petualang. Namun, skill yang dia peroleh adalah skill yang tidak berguna bernama [Guild Member] yang tidak memiliki kekuatan ofensif. Earth putus asa, tetapi dia menyadari bahwa skill [Guild Member] sebenarnya adalah skill terkuat yang memungkinkannya untuk mendapatkan skill apa pun yang diinginkannya dengan menggunakan poin guild. Dengan skill terkuat, Earth memulai petualangan di dunia lain sebagai seorang petualang yang tak terkalahkan."
-    },
-    {
-      judul: "Hige wo Soru. Soshite Joshikousei wo Hirou. Bahasa Indonesia",
-      keyword: "hige",
-      genre: "Drama, Romance, Slice of Life",
-      sinopsis: "Yoshida, seorang karyawan perusahaan berusia 26 tahun, telah jatuh cinta pada Yoshida selama lima tahun. Meskipun akhirnya dia mendapatkan keberanian untuk mengajak kencannya, dia ditolak mentah-mentah dan mabuk pulang. Dalam perjalanan pulang, dia melihat seorang gadis SMA duduk di pinggir jalan. Gadis itu bernama Sayu Ogiwara. Tanpa berpikir panjang, Yoshida membiarkannya tinggal di tempatnya."
-    },
-    {
-      judul: "High School DxD Bahasa Indonesia",
-      keyword: "high",
-      genre: "Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Supernatural",
-      sinopsis: "Issei Hyodo adalah siswa mesum kelas 2 SMA Akademi Kuoh yang memiliki keinginan untuk membuat harem. Tiba-tiba suatu hari, dia diajak kencan oleh seorang gadis bernama Yuma Amano. Saat kencan, Yuma menunjukkan wujud aslinya sebagai Malaikat Jatuh dan mencoba membunuh Issei!"
-    },
-    {
-      judul: "Hikawa-sensei wants an otaku boyfriend Bahasa Indonesia",
-      keyword: "hikawa-sensei",
-      genre: "Comedy, Romance",
-      sinopsis: "“Aku akan membuatmu jatuh cinta padaku.” Hikawa, guru bahasa Inggris di sekolah menengah, menyatakan cintanya kepada Narumi, seorang guru seni rupa yang merupakan seorang otaku. Namun, Narumi tidak tertarik pada wanita, dan dia juga seorang otaku yang payah. Hikawa-sensei yang cantik dan sempurna mendekati Narumi dengan berbagai cara, tetapi—!?"
-    },
-    {
-      judul: "Hikikomori Kyuuketsuki no Monmon Bahasa Indonesia",
-      keyword: "hikikomori",
-      genre: "Comedy, Supernatural",
-      sinopsis: "Komedi vampir rumahan yang terjadi di sebuah rumah tempat seorang vampir NEET yang berusia lebih dari 300 tahun dan seorang gadis SMA yang cerewet tinggal bersama."
-    },
-    {
-      judul: "Hitoribocchi no Isekai Kouryaku Bahasa Indonesia",
-      keyword: "hitoribocchi",
-      genre: "Action, Adventure, Comedy, Fantasy, Harem, Romance",
-      sinopsis: "Bocchi tiba-tiba dipindahkan ke dunia lain! Dan dunia lain itu adalah dunia game yang pernah dia mainkan dulu. Bocchi, yang selalu sendirian dalam hidup, harus memulai petualangan di dunia lain sendirian. Dalam keputusasaan karena sendirian, dia mengikuti saran dari dewi game dan mencoba untuk menaklukkan dunia lain sendirian—."
-    },
-    {
-      judul: "Houkago no Seijo Bahasa Indonesia",
-      keyword: "houkago",
-      genre: "Fantasy, Romance, School",
-      sinopsis: "“Jadilah milikku.” Suatu hari setelah sekolah, aku dipanggil oleh seorang gadis cantik yang merupakan santa—!? Kehidupan sekolah menengahku berubah drastis setelah bertemu dengan santa cantik itu!"
+      judul: "Horimiya",
+      keyword: "horimiya",
+      genre: "Comedy, Romance, School, Slice of Life",
+      sinopsis: "Kyouko Hori, seorang siswi SMA populer dan pintar, dan Izumi Miyamura, seorang siswa pendiam dan berkacamata, memiliki sisi rahasia yang tidak diketahui teman-teman sekelas mereka. Ketika mereka bertemu di luar sekolah, mereka saling mengungkap sisi lain dari diri mereka dan memulai hubungan yang unik dan menghangatkan hati."
     }
   ],
-  "I": [],
-  "J": [],
-  "K": [],
-  "L": [],
-  "M": [],
-  "N": [],
-  "O": [],
-  "P": [],
+  "I": [
+    {
+      judul: "Inuyasha",
+      keyword: "inuyasha",
+      genre: "Action, Adventure, Comedy, Fantasy, Historical, Romance, Supernatural",
+      sinopsis: "Kagome Higurashi, seorang siswi SMA dari Tokyo modern, terlempar kembali ke era Sengoku Jepang setelah terjatuh ke dalam sumur keramat di kuil keluarganya. Di sana, dia bertemu dengan Inuyasha, siluman setengah manusia setengah anjing, dan bersama-sama mereka memulai perjalanan untuk mengumpulkan pecahan-pecahan Bola Shikon yang legendaris dan mengalahkan iblis jahat Naraku."
+    },
+    {
+        judul: "Infinite Dendrogram",
+        keyword: "infinitedendrogram",
+        genre: "Sci-Fi, Game, Action, Fantasy",
+        sinopsis: "Reiji Mukudori memulai kehidupan kuliahnya di Tokyo, tetapi memutuskan untuk menunda kuliahnya untuk memainkan game VRMMORPG 'Infinite Dendrogram'. Dengan bantuan kakaknya yang veteran, Shuu, Reiji memulai petualangan di dunia game yang luas dan penuh kemungkinan tak terbatas."
+    }
+  ],
+  "J": [
+    {
+      judul: "Jujutsu Kaisen",
+      keyword: "jujutsukaisen",
+      genre: "Action, Supernatural, Horror",
+      sinopsis: "Yuuji Itadori, seorang siswa SMA dengan kemampuan fisik luar biasa, menelan jari kutukan untuk melindungi teman-temannya dari roh jahat. Akibatnya, dia menjadi wadah bagi Ryomen Sukuna, Raja Kutukan yang kuat. Di bawah bimbingan penyihir jujutsu, Yuuji memulai perjalanan berbahaya untuk mengendalikan kekuatan Sukuna dan melawan kutukan jahat."
+    }
+  ],
+  "K": [
+    {
+      judul: "Kaguya-sama: Love Is War",
+      keyword: "kaguyasama",
+      genre: "Comedy, Psychological, Romance, School, Slice of Life",
+      sinopsis: "Miyuki Shirogane dan Kaguya Shinomiya, ketua OSIS dan wakil ketua OSIS SMA Shuchiin, adalah dua orang jenius yang saling mencintai, tetapi terlalu gengsi untuk mengakuinya. Mereka memulai perang cinta yang rumit dan lucu, berusaha membuat pihak lain mengaku terlebih dahulu."
+    },
+    {
+      judul: "Kimetsu no Yaiba (Demon Slayer)",
+      keyword: "kimetsunoyaiba",
+      genre: "Action, Demons, Historical, Supernatural",
+      sinopsis: "Sama dengan sinopsis Demon Slayer di atas (karena judul alternatif)"
+    },
+    {
+      judul: "Konosuba: God's Blessing on This Wonderful World!",
+      keyword: "konosuba",
+      genre: "Adventure, Comedy, Fantasy, Isekai, Parody, Supernatural",
+      sinopsis: "Kazuma Satou, seorang NEET yang menyedihkan, meninggal dalam kecelakaan lalu lintas yang memalukan dan bereinkarnasi ke dunia fantasi. Bersama dewi Aqua yang menyebalkan, penyihir Megumin yang obsesif dengan ledakan, dan crusader Darkness yang masokis, Kazuma memulai petualangan konyol dan penuh kekacauan di dunia fantasi yang tidak sesuai harapannya."
+    }
+  ],
+  "L": [
+    {
+      judul: "Log Horizon",
+      keyword: "loghorizon",
+      genre: "Action, Adventure, Fantasy, Game",
+      sinopsis: "Tiga puluh ribu pemain game online Elder Tale terjebak di dalam dunia game setelah update ekspansi terbaru. Shiroe, seorang penyihir veteran yang cerdas dan licik, harus memimpin para pemain lain untuk bertahan hidup di dunia game yang kini menjadi kenyataan dan mengungkap misteri di balik fenomena ini."
+    },
+    {
+      judul: "Love, Chunibyo & Other Delusions!",
+      keyword: "chunibyo",
+      genre: "Comedy, Romance, School, Slice of Life",
+      sinopsis: "Yuuta Togashi berusaha melupakan masa lalunya yang memalukan sebagai penderita 'chunibyo' (delusi tingkat SMP) saat memasuki SMA. Namun, dia bertemu dengan Rikka Takanashi, seorang gadis 'chunibyo' akut yang membuatnya kembali terlibat dalam dunia delusi dan fantasi yang kocak dan mengharukan."
+    },
+    {
+        judul: "Lycoris Recoil",
+        keyword: "lycorisrecoil",
+        genre: "Action, Slice of Life",
+        sinopsis: "Di dunia yang damai berkat organisasi rahasia 'Lycoris', Chisato Nishikigi adalah Lycoris terkuat yang legendaris. Bersama rekannya yang baru, Takina Inoue, Chisato bekerja di LycoReco, sebuah cabang Lycoris yang menyamar sebagai kafe, sambil menghadapi berbagai misi dan masalah pribadi."
+    }
+  ],
+  "M": [
+    {
+      judul: "Mushoku Tensei: Jobless Reincarnation",
+      keyword: "mushokutensei",
+      genre: "Drama, Fantasy, Isekai",
+      sinopsis: "Seorang NEET berusia 34 tahun bereinkarnasi ke dunia fantasi sebagai bayi bernama Rudeus Greyrat. Dengan ingatan dari kehidupan sebelumnya, Rudeus bertekad untuk menjalani kehidupan baru yang lebih baik dan menghindari kesalahan masa lalunya. Dia memulai perjalanan panjang untuk mengembangkan kekuatannya, menemukan jati dirinya, dan menghadapi takdirnya di dunia baru ini."
+    },
+    {
+      judul: "My Hero Academia",
+      keyword: "myheroacademia",
+      genre: "Action, Comedy, School, Superpower",
+      sinopsis: "Di dunia di mana hampir semua orang memiliki 'Quirk' (kekuatan super), Izuku Midoriya lahir tanpa Quirk sama sekali. Meskipun demikian, dia bercita-cita menjadi pahlawan super seperti idolanya, All Might. Setelah pertemuan takdir dengan All Might, Izuku mewarisi Quirk 'One For All' dan memasuki SMA UA, sekolah pahlawan terkemuka, untuk mewujudkan impiannya."
+    },
+    {
+      judul: "Made in Abyss",
+      keyword: "madeinabyss",
+      genre: "Adventure, Dark Fantasy, Mystery, Sci-Fi",
+      sinopsis: "Riko, seorang gadis yatim piatu yang tinggal di kota Orth, bercita-cita menjadi Cave Raider legendaris seperti ibunya. Ketika dia menemukan robot humanoid bernama Reg, mereka berdua memulai petualangan berbahaya menuruni Abyss, jurang raksasa misterius yang penuh dengan makhluk aneh dan relik kuno, untuk mencari ibunya yang hilang."
+    },
+    {
+      judul: "Mob Psycho 100",
+      keyword: "mobpsycho100",
+      genre: "Action, Comedy, Slice of Life, Supernatural",
+      sinopsis: "Shigeo 'Mob' Kageyama adalah seorang siswa SMP yang memiliki kekuatan psikis yang luar biasa. Mob berusaha menjalani kehidupan normal dan menekan emosinya agar tidak kehilangan kendali atas kekuatannya yang berbahaya. Namun, berbagai kejadian supernatural dan pertemuan dengan esper lain terus menguji batas kemampuannya."
+    },
+     {
+        judul: "Monogatari Series",
+        keyword: "monogatari",
+        genre: "Mystery, Supernatural, Romance, Vampire",
+        sinopsis: "Koyomi Araragi, seorang siswa SMA yang selamat dari serangan vampir, terlibat dalam kehidupan gadis-gadis yang menderita 'keanehan' supernatural. Setiap cerita berfokus pada satu gadis dan 'keanehan' yang mereka hadapi, dengan Koyomi berusaha membantu mereka sambil menghadapi masa lalunya sendiri."
+    }
+  ],
+  "N": [
+    {
+      judul: "Naruto",
+      keyword: "naruto",
+      genre: "Action, Adventure, Comedy, Martial Arts, Shounen, Supernatural",
+      sinopsis: "Naruto Uzumaki, seorang ninja yatim piatu yang dikucilkan oleh desanya, bercita-cita menjadi Hokage, pemimpin desa Konohagakure. Dengan semangat pantang menyerah dan bantuan teman-temannya, Naruto berjuang untuk diakui dan melindungi desa tercintanya dari berbagai ancaman."
+    },
+    {
+      judul: "No Game No Life",
+      keyword: "nogamenolife",
+      genre: "Adventure, Comedy, Ecchi, Fantasy, Game, Supernatural",
+      sinopsis: "Sora dan Shiro, kakak beradik NEET dan gamer jenius, dipanggil ke dunia Disboard, dunia di mana segala sesuatu diputuskan melalui permainan. Di dunia ini, mereka bertemu dengan dewi Tet dan memulai petualangan untuk menantang semua ras dan menjadi dewa dunia permainan."
+    },
+    {
+      judul: "Nisekoi: False Love",
+      keyword: "nisekoi",
+      genre: "Comedy, Harem, Romance, School",
+      sinopsis: "Raku Ichijo, putra seorang bos yakuza, dan Chitoge Kirisaki, putri seorang bos gangster, terpaksa berpura-pura menjadi pasangan kekasih untuk mencegah perang antar geng. Meskipun saling membenci pada awalnya, mereka perlahan mulai mengembangkan perasaan satu sama lain di tengah kepura-puraan dan kesalahpahaman yang lucu."
+    },
+    {
+        judul: "Ningen Fushin no Boukenshatachi ga Sekai o Sukuu Youdesu (The Adventurers Who Don't Believe in Humanity Will Save the World)",
+        keyword: "ningenfushin",
+        genre: "Fantasy, Adventure, Comedy",
+        sinopsis: "Nick, seorang petualang yang dikeluarkan dari party heroiknya, bergabung dengan party baru yang beranggotakan petualang-petualang yang juga tidak percaya pada kemanusiaan. Bersama-sama, mereka membentuk ikatan yang unik dan memulai petualangan untuk bertahan hidup dan membuktikan bahwa mereka bisa menyelamatkan dunia meskipun memiliki masa lalu yang kelam."
+    }
+  ],
+  "O": [
+    {
+      judul: "One Punch Man",
+      keyword: "onepunchman",
+      genre: "Action, Comedy, Parody, Sci-Fi, Superpower, Supernatural",
+      sinopsis: "Saitama, seorang pahlawan super yang terlalu kuat, mampu mengalahkan semua musuh hanya dengan satu pukulan. Bosan dengan kekuatannya yang tak tertandingi, Saitama mencari lawan yang sepadan dan petualangan yang lebih menantang sambil menjalani kehidupan sehari-hari yang membosankan."
+    },
+    {
+      judul: "Overlord",
+      keyword: "overlord",
+      genre: "Action, Adventure, Fantasy, Game, Isekai, Magic, Supernatural",
+      sinopsis: "Ketika server game online Yggdrasil akan ditutup, Momonga, seorang pemain veteran, memutuskan untuk tetap tinggal di dalam game sampai akhir. Namun, server tidak pernah ditutup, dan Momonga mendapati dirinya terjebak di dalam dunia game sebagai karakter kerangka kuat bernama Ainz Ooal Gown. Bersama para NPC setia yang kini memiliki kesadaran, Ainz memulai misinya untuk menaklukkan dunia baru ini."
+    },
+    {
+      judul: "Oregairu (My Teen Romantic Comedy SNAFU)",
+      keyword: "oregairu",
+      genre: "Comedy, Drama, Romance, School, Slice of Life",
+      sinopsis: "Hachiman Hikigaya, seorang siswa SMA penyendiri dan sinis, dipaksa bergabung dengan Klub Relawan sekolah. Di sana, dia bertemu dengan Yukino Yukinoshita, gadis cantik dan cerdas yang juga memiliki kepribadian dingin dan idealis. Bersama-sama, mereka membantu siswa lain memecahkan masalah mereka, tetapi juga menghadapi masalah pribadi dan kesulitan dalam memahami hubungan sosial."
+    },
+     {
+        judul: "Oshi no Ko",
+        keyword: "oshinoko",
+        genre: "Drama, Mystery, Supernatural, Reincarnation",
+        sinopsis: "Seorang dokter kandungan yang terobsesi dengan idol bernama Ai Hoshino, secara tragis terbunuh oleh stalker. Namun, dia bereinkarnasi sebagai salah satu anak kembar Ai. Dengan ingatan dari kehidupan sebelumnya, dia menyaksikan sisi gelap industri hiburan dan bertekad untuk mengungkap misteri kematian Ai dan membalas dendam."
+    }
+  ],
+  "P": [
+    {
+      judul: "Parasyte -the maxim-",
+      keyword: "parasyte",
+      genre: "Action, Horror, Sci-Fi, Psychological",
+      sinopsis: "Shinichi Izumi, seorang siswa SMA biasa, menjadi korban parasit alien yang mencoba mengambil alih otaknya. Namun, parasit tersebut hanya berhasil menginfeksi tangan kanannya dan menjadi 'Migi', parasit yang hidup berdampingan dengan Shinichi. Bersama Migi, Shinichi harus berjuang melawan parasit lain yang mengancam umat manusia dan menghadapi dilema moral tentang keberadaan mereka."
+    },
+    {
+      judul: "Psycho-Pass",
+      keyword: "psychopass",
+      genre: "Action, Police, Sci-Fi",
+      sinopsis: "Di masa depan distopia, sistem Sibyl mengukur tingkat stres mental dan kecenderungan kriminalitas setiap orang dengan 'Psycho-Pass'. Akane Tsunemori, seorang Inspektur baru di Biro Investigasi Kriminal, harus bekerja sama dengan Enforcer Shinya Kogami, seorang mantan Inspektur yang Psycho-Pass-nya keruh, untuk menegakkan hukum dan mengungkap kebenaran di balik sistem Sibyl yang kompleks dan korup."
+    },
+    {
+      judul: "Promised Neverland",
+      keyword: "promisedneverland",
+      genre: "Horror, Mystery, Psychological, Sci-Fi, Thriller",
+      sinopsis: "Emma, Norman, dan Ray adalah anak-anak yatim piatu yang hidup bahagia di panti asuhan Grace Field House. Namun, mereka menemukan kebenaran mengerikan tentang panti asuhan mereka yang ternyata adalah peternakan manusia untuk iblis. Dengan kecerdasan dan keberanian mereka, Emma, Norman, dan Ray merencanakan pelarian massal dari panti asuhan neraka tersebut."
+    }
+  ],
   "Q": [],
-  "R": [],
-  "S": [],
-  "T": [],
+  "R": [
+    {
+      judul: "Re:Zero - Starting Life in Another World-",
+      keyword: "rezero",
+      genre: "Action, Adventure, Drama, Fantasy, Psychological, Thriller",
+      sinopsis: "Subaru Natsuki, seorang NEET yang tiba-tiba dipanggil ke dunia fantasi, mendapatkan kemampuan 'Return by Death', yang membuatnya dapat kembali ke titik penyimpanan setiap kali dia mati. Terjebak dalam siklus kematian dan keputusasaan, Subaru harus menggunakan kemampuannya untuk melindungi orang-orang yang dicintainya dan mengungkap misteri dunia baru yang kejam ini."
+    },
+    {
+      judul: "Rent-A-Girlfriend",
+      keyword: "rentagirlfriend",
+      genre: "Comedy, Romance, School",
+      sinopsis: "Kazuya Kinoshita, seorang mahasiswa yang patah hati, menyewa pacar sewaan bernama Chizuru Ichinose untuk mengatasi kesepiannya. Meskipun awalnya hanya hubungan palsu, Kazuya dan Chizuru perlahan mulai mengembangkan perasaan yang nyata satu sama lain di tengah situasi yang rumit dan lucu."
+    },
+    {
+      judul: "Rascal Does Not Dream of Bunny Girl Senpai",
+      keyword: "bunnygirlsenpai",
+      genre: "Comedy, Romance, School, Supernatural",
+      sinopsis: "Sakuta Azusagawa, seorang siswa SMA yang sering dianggap sebagai 'anak bermasalah', bertemu dengan Mai Sakurajima, seorang aktris terkenal yang tiba-tiba menghilang dari pandangan orang-orang kecuali dirinya. Sakuta menyadari bahwa Mai menderita 'Sindrom Pubertas', fenomena misterius yang menyebabkan kejadian supernatural pada remaja. Bersama-sama, mereka berusaha memecahkan misteri Sindrom Pubertas dan membantu gadis-gadis lain yang menderitanya."
+    },
+    {
+      judul: "Rising of the Shield Hero",
+      keyword: "shieldhero",
+      genre: "Action, Adventure, Fantasy, Isekai",
+      sinopsis: "Naofumi Iwatani, seorang mahasiswa biasa, dipanggil ke dunia lain sebagai 'Pahlawan Perisai'. Namun, dia dikhianati dan difitnah oleh kerajaan, membuatnya menjadi orang yang paling dibenci dan direndahkan. Dikhianati dan sendirian, Naofumi harus berjuang untuk bertahan hidup dan membuktikan dirinya sebagai pahlawan sejati dengan perisai legendarisnya."
+    }
+  ],
+  "S": [
+    {
+      judul: "Sword Art Online",
+      keyword: "swordartonline",
+      genre: "Action, Adventure, Fantasy, Game, Romance",
+      sinopsis: "Kazuto 'Kirito' Kirigaya terjebak di dalam game virtual reality Sword Art Online bersama ribuan pemain lainnya. Jika mereka mati di dalam game, mereka juga akan mati di dunia nyata. Kirito harus berjuang untuk bertahan hidup dan menyelesaikan game tersebut untuk kembali ke dunia nyata dan menyelamatkan semua pemain yang terjebak."
+    },
+    {
+      judul: "Steins;Gate",
+      keyword: "steinsgate",
+      genre: "Sci-Fi, Psychological, Thriller",
+      sinopsis: "Rintaro Okabe, seorang ilmuwan gila yang mengaku dirinya 'ilmuwan gila yang gila', secara tidak sengaja menemukan cara untuk mengirim pesan ke masa lalu. Bersama teman-temannya di laboratorium, Okabe mulai bereksperimen dengan mesin waktu buatannya, tanpa menyadari konsekuensi mengerikan yang akan menimpa mereka dan dunia di sekitar mereka."
+    },
+    {
+      judul: "Spy x Family",
+      keyword: "spyxfamily",
+      genre: "Action, Comedy, Slice of Life",
+      sinopsis: "Twilight, mata-mata terhebat Westalis, diberi misi rahasia untuk menyusup ke sekolah elit Eden Academy untuk mendekati Donovan Desmond, tokoh penting Ostania. Untuk menjalankan misinya, Twilight membentuk keluarga palsu dengan Yor Briar, seorang pembunuh bayaran, dan Anya, seorang gadis kecil yang memiliki kemampuan membaca pikiran. Keluarga Forger yang unik dan penuh rahasia ini memulai petualangan kocak dan penuh aksi untuk menjaga perdamaian dunia."
+    },
+    {
+      judul: "Seven Deadly Sins",
+      keyword: "sevendeadlysins",
+      genre: "Action, Adventure, Fantasy, Magic, Shounen",
+      sinopsis: "The Seven Deadly Sins, kelompok ksatria terkuat di Britannia yang difitnah dan dituduh berkhianat, diburu oleh Holy Knights. Elizabeth Liones, putri kerajaan Liones, mencari Seven Deadly Sins untuk meminta bantuan mereka dalam menyelamatkan kerajaannya dari tirani Holy Knights. Bersama Meliodas, kapten Seven Deadly Sins, Elizabeth memulai perjalanan epik untuk mengumpulkan kembali anggota Sins lainnya dan mengungkap kebenaran di balik pengkhianatan tersebut."
+    },
+    {
+        judul: "Solo Leveling",
+        keyword: "sololeveling",
+        genre: "Action, Fantasy, Adventure",
+        sinopsis: "Di dunia di mana portal ke dimensi lain muncul dan menghubungkan dunia manusia dengan dunia monster, para Hunter muncul untuk melawan monster dan melindungi umat manusia. Sung Jinwoo, seorang Hunter peringkat-E terlemah, secara tak terduga mendapatkan kekuatan misterius yang memungkinkannya untuk naik level tanpa batas. Dengan kekuatan barunya, Sung Jinwoo bertekad untuk menjadi Hunter terkuat dan mengungkap rahasia di balik portal dan kekuatannya."
+    },
+    {
+        judul: "Shadows House",
+        keyword: "shadowshouse",
+        genre: "Mystery, Supernatural, Slice of Life",
+        sinopsis: "Di rumah bangsawan Shadows House yang misterius, boneka hidup melayani keluarga bangsawan Shadows yang tanpa wajah. Emilico, boneka hidup yang ceria dan polos, melayani Kate Shadow, seorang bangsawan Shadows yang dingin dan misterius. Bersama-sama, mereka mengungkap rahasia gelap Shadows House dan dunia di balik tirai kemewahan."
+    }
+  ],
+  "T": [
+    {
+      judul: "Tokyo Ghoul",
+      keyword: "tokyoghoul",
+      genre: "Action, Dark Fantasy, Horror, Supernatural",
+      sinopsis: "Ken Kaneki, seorang mahasiswa biasa, menjadi setengah ghoul setelah selamat dari serangan ghoul. Terjebak di antara dunia manusia dan ghoul, Kaneki harus beradaptasi dengan kehidupan barunya sebagai ghoul dan berjuang untuk bertahan hidup di dunia Tokyo yang gelap dan berbahaya, di mana manusia dan ghoul saling memangsa."
+    },
+    {
+      judul: "That Time I Got Reincarnated as a Slime",
+      keyword: "tensura",
+      genre: "Fantasy, Isekai, Adventure",
+      sinopsis: "Satoru Mikami, seorang pekerja kantoran biasa, terbunuh dan bereinkarnasi ke dunia lain sebagai slime lemah. Meskipun lemah di awal, Rimuru Tempest (nama barunya) memiliki kemampuan unik 'Predator' yang membuatnya dapat melahap apa pun dan mendapatkan kekuatan mereka. Dengan kemampuan ini, Rimuru memulai perjalanan untuk membangun bangsa monster yang damai dan makmur di dunia fantasi yang penuh dengan konflik dan intrik."
+    },
+    {
+      judul: "Tower of God",
+      keyword: "towerofgod",
+      genre: "Action, Adventure, Fantasy, Mystery",
+      sinopsis: "Rachel meninggalkan sahabatnya, Bam, untuk mendaki Tower of God, menara misterius yang konon dapat mengabulkan semua keinginan. Bam, yang hanya memiliki Rachel di hidupnya, memutuskan untuk mengejar Rachel dan mendaki menara tersebut meskipun penuh dengan bahaya dan tantangan yang mematikan. Di dalam menara, Bam bertemu dengan berbagai karakter unik dan mengungkap misteri di balik menara dan takdirnya sendiri."
+    },
+    {
+        judul: "The Eminence in Shadow",
+        keyword: "eminenceinshadow",
+        genre: "Action, Comedy, Fantasy, Isekai",
+        sinopsis: "Cid Kageno memiliki impian tersembunyi: menjadi 'dalang bayangan' yang menarik benang dari balik layar dan mempengaruhi jalannya dunia. Dia berlatih tanpa lelah untuk mencapai kekuatan absolut, tetapi menyadari bahwa kekuatan saja tidak cukup untuk mewujudkan impiannya. Ketika dia bereinkarnasi ke dunia lain, Cid memutuskan untuk mewujudkan impiannya dengan cara yang paling absurd dan menggelikan, menciptakan organisasi fiktif 'Shadow Garden' dan menyebarkan kebohongan yang menjadi kenyataan."
+    }
+  ],
   "U": [],
   "V": [],
   "W": [],
   "X": [],
-  "Y": [],
+  "Y": [
+     {
+        judul: "Your Lie in April",
+        keyword: "yourlieinapril",
+        genre: "Drama, Music, Romance, School",
+        sinopsis: "Kousei Arima, seorang pianis jenius, kehilangan kemampuan untuk mendengar suara pianonya setelah trauma kematian ibunya. Bertahun-tahun kemudian, dia bertemu dengan Kaori Miyazono, seorang pemain biola ceria dan bersemangat bebas yang membantunya kembali ke dunia musik dan menghadapi trauma masa lalunya."
+    }
+  ],
   "Z": []
 };
 
