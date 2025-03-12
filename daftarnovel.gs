@@ -9,7 +9,7 @@
 //   sinopsis: Sinopsis singkat novel (untuk deskripsi lebih detail)
 
 const daftarNovel = {
-  "1": [
+  "#": [
     {
       judul: "10-nen Goshi no HikiNEET o Yamete, Gaishutsushitara Jitaku goto Isekai ni Ten'ishiteta Bahasa Indonesia",
       keyword: "10-nen",
