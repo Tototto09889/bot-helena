@@ -839,11 +839,6 @@ const daftarNovel = {
       sinopsis: "Pekerjaan mudah yang hanya perlu dikalahkan oleh pahlawan."
     }
   ],
-  "V": [],
-  "W": [],
-  "X": [],
-  "Y": [],
-  "Z": []
 };
 
 
