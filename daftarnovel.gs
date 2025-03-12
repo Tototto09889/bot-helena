@@ -484,7 +484,7 @@ function getMenuNovelKeyboard() {
 function getNovelListKeyboard(huruf) {
   let novels = daftarNovel[huruf] || [];
   let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
-  tombolNovel.push([{ text: "Kembali ke Menu Novel", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
+  tombolNovel.push([{ text: "Kembali ke Menu Novel 🤡", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
   return { inline_keyboard: tombolNovel };
 }
 
@@ -502,7 +502,7 @@ function getNovelPageKeyboard(judulNovel) {
   let keyboard = {
     inline_keyboard: [
       [
-        { text: "🔮 Telusuri Berkas", switch_inline_query_current_chat: novel.keyword } // Inline query dengan keyword novel
+        { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword } // Inline query dengan keyword novel
       ],
       [
         { text: "Kembali ke Daftar Menu " + judulNovel.charAt(0).toUpperCase(), callback_data: "novel_list_" + judulNovel.charAt(0).toUpperCase() } // Kembali ke menu novel per huruf
