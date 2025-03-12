@@ -10,13 +10,13 @@ const daftarNovel = {
   ],
   "A": [
     {
-      judul: "Ankoku Kishi Monogatari ~Yuusha wo", // Judul diubah
+      judul: "Ankoku Kishi Monogatari", // Judul diubah
       keyword: "ankoku",
       genre: "Fantasy, Action, Adventure",
       sinopsis: "Dunia fantasi yang diperintah oleh raja iblis dan pahlawan. Ksatria Kegelapan dipanggil ke dunia lain untuk mengalahkan pahlawan!?"
     },
     {
-      judul: "Ankoku Kishi to Issho!", // Judul diubah
+      judul: "Ankoku Kishi to Issho", // Judul diubah
       keyword: "ankoku",
       genre: "Comedy, Fantasy, Slice of Life",
       sinopsis: "Menceritakan kehidupan sehari-hari yang lucu dari Ksatria Kegelapan yang kikuk dan gadis gothic kecil yang kesepian."
@@ -28,7 +28,7 @@ const daftarNovel = {
       sinopsis: "Di dunia fantasi yang kejam, Hajime Nagumo dan teman-teman sekelasnya dipanggil sebagai pahlawan. Namun, Hajime mendapati dirinya sebagai yang terlemah dan dikhianati oleh teman-temannya. Terjatuh ke dalam jurang keputusasaan, Hajime harus berjuang untuk bertahan hidup dan menjadi yang terkuat untuk kembali ke rumah."
     },
     {
-      judul: "Ashita, Boku wa Shinu.", // Judul diubah
+      judul: "Ashita, Boku wa Shinu", // Judul diubah
       keyword: "ashita",
       genre: "Drama, Romance, School, Supernatural",
       sinopsis: "Aku pasti akan mati besok, dan kamu akan hidup kembali —. Murid SMA kelas dua, Shiro Nagai, memiliki kekuatan untuk melihat 'besok' orang lain. Suatu hari, dia melihat 'besok' dari teman masa kecilnya, Haruna Rikka, dan mengetahui bahwa dia akan mati karena kecelakaan yang tidak masuk akal. Untuk mengubah 'besok' Haruna, Shiro menggunakan kekuatannya."
@@ -68,7 +68,7 @@ const daftarNovel = {
       sinopsis: "Ketika Kusanagi Godou berhasil mengalahkan dewa perang, dia menjadi Campione! Sekarang dia harus menghadapi dewa-dewa yang tidak patuh yang menyebabkan masalah di sekitarnya."
     },
     {
-      judul: "Chitose-kun wa Ramune Bin", // Judul diubah
+      judul: "Chitose-kun wa Ramune", // Judul diubah
       keyword: "chitose-kun",
       genre: "Romance, School",
       sinopsis: "Dikelilingi oleh pacar-pacar yang tak terhitung jumlahnya, Saku Chitose menduduki posisi populer kelas-S yang tak tergoyahkan di sekolah. Dia menyadari bahwa dia 'memahami' mereka. Dia pikir, karena dia tahu bahwa 'kebosanan adalah racun terbesar,' bahwa 'hal-hal yang menyenangkan selalu benar,' dan bahwa dia spesial, berbeda dari orang lain di sekitar— Namun, apakah dia benar-benar 'memahami' mereka?"
@@ -164,7 +164,7 @@ const daftarNovel = {
   ],
   "F": [
     {
-      judul: "Failure Frame: I Became", // Judul diubah
+      judul: "Failure Frame", // Judul diubah
       keyword: "failure",
       genre: "Fantasy, Isekai",
       sinopsis: "Touka Mimori dan teman-teman sekelasnya dipanggil ke dunia lain sebagai pahlawan. Namun, Touka adalah yang terlemah di antara mereka dan dianggap tidak berguna. Dibuang oleh kerajaan, Touka harus berjuang untuk bertahan hidup di dunia yang kejam ini dengan kekuatannya yang 'gagal'."
@@ -190,7 +190,7 @@ const daftarNovel = {
       sinopsis: "Pada abad ke-20, kehancuran yang belum pernah terjadi sebelumnya—dikenal sebagai Invertia—menyerang planet ini. Karena bencana ini, tatanan dunia benar-benar hancur. Namun, dari dalam kehancuran, umat manusia telah memperoleh jenis kekuatan baru—Genestella. Kota академия, yang didirikan untuk Genestella generasi berikutnya, adalah 'Rikka'—juga dikenal sebagai Asterisk."
     },
     {
-      judul: "Garbage Brave: Isekai ni", // Judul diubah
+      judul: "Garbage Brave", // Judul diubah
       keyword: "garbage",
       genre: "Action, Adventure, Fantasy, Isekai",
       sinopsis: "Pahlawan itu—dibuang seperti sampah. Suatu hari, Kanbara Kanata dipanggil ke dunia lain bersama teman-teman sekelasnya. Di dunia yang berbeda, dia diberi gelar 'Pahlawan' dan diminta untuk mengalahkan Raja Iblis. Namun, Kanata, yang memiliki kemampuan terlemah, diperlakukan tidak kompeten dan dibuang ke tempat yang disebut 'Lahan Terbuang' sendirian."
@@ -308,13 +308,13 @@ const daftarNovel = {
       sinopsis: "Karena hukuman dari permainan hukuman, saya akhirnya mengaku kepada gadis paling populer di sekolah."
     },
     {
-      judul: "Isekai Apocalypse MYNOGHRA ~The Conquest", // Judul diubah
+      judul: "Isekai Apocalypse MYNOGHRA The Conquest", // Judul diubah
       keyword: "isekai",
       genre: "Action, Fantasy, Isekai",
       sinopsis: "Kisah tentang Touya yang bereinkarnasi ke dunia lain dan membangun peradaban reruntuhan untuk menaklukkan dunia."
     },
     {
-      judul: "Isekai Mahou wa Okureteru!", // Judul diubah
+      judul: "Isekai Mahou wa Okureteru", // Judul diubah
       keyword: "isekai",
       genre: "Action, Fantasy, Sci-Fi",
       sinopsis: "Kisah tentang Suimei yang secara tidak sengaja terseret ke dunia lain bersama teman-teman sekelasnya. Namun, sihir dunia lain 'terlalu ketinggalan zaman' baginya."
