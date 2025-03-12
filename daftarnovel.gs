@@ -1,6 +1,4 @@
 // daftarnovel.gs
-
-// daftarnovel.gs
 // Objek daftarNovel berisi informasi novel-novel yang tersedia di bot.
 // Setiap properti objek adalah huruf abjad awal judul novel (huruf besar).
 // Nilai setiap properti adalah array objek, dengan setiap objek merepresentasikan satu novel.
