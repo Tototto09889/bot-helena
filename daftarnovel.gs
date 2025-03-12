@@ -542,6 +542,6 @@ function showNovelPage(chatId, messageId, judulNovel) {
     return;
   }
 
-  let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b>\n${novel.genre}\n\n<b>Sinopsis 📜:</b>\n${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
+  let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
   editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
