@@ -1,13 +1,4 @@
 // daftarnovel.gs
-// Objek daftarNovel berisi informasi novel-novel yang tersedia di bot.
-// Setiap properti objek adalah huruf abjad awal judul novel (huruf besar).
-// Nilai setiap properti adalah array objek, dengan setiap objek merepresentasikan satu novel.
-// Struktur objek novel:
-//   judul: Judul lengkap novel (untuk ditampilkan di menu)
-//   keyword: Kata kunci untuk pencarian inline (gunakan huruf kecil, tanpa spasi, kata pertama judul)
-//   genre: Genre novel (untuk deskripsi singkat)
-//   sinopsis: Sinopsis singkat novel (untuk deskripsi lebih detail)
-
 const daftarNovel = {
   "#": [
     {
