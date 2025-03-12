@@ -12,7 +12,7 @@ const daftarNovel = {
   "B": [
     {
       judul: "Berserk of Gluttony",
-      keyword: "berserk gluttony",
+      keyword: "berserk",
       deskripsi: "Fate Graphite selalu dihina karena skill 'Gluttony' yang hanya membuatnya kelaparan. Namun, suatu hari ia menyadari kekuatan tersembunyi dari skill tersebut."
     }
   ],
