@@ -95,7 +95,7 @@ const daftarNovel = {
       sinopsis: "Di Jepang era Taisho, Tanjiro Kamado kembali ke rumah dan menemukan keluarganya dibantai oleh iblis, dan satu-satunya yang selamat adalah adiknya, Nezuko, yang telah berubah menjadi iblis. Untuk menyembuhkan Nezuko dan membalaskan dendam keluarganya, Tanjiro bergabung dengan Korps Pembasmi Iblis dan memulai perjalanan berbahaya melawan iblis."
     },
     {
-      judul: "DanMachi (Is It Wrong to Try to Pick Up Girls in a Dungeon?)",
+      judul: "DanMachi Is It Wrong to Try to Pick Up Girls in a Dungeon?",
       keyword: "danmachi",
       genre: "Action, Adventure, Comedy, Fantasy, Romance",
       sinopsis: "Di kota Orario, para petualang menjelajahi Dungeon, labirin bawah tanah berbahaya yang penuh monster dan harta karun. Bell Cranel, seorang petualang pemula, bertemu dengan dewi Hestia dan memulai petualangannya di Dungeon dengan harapan menjadi petualang terhebat dan menemukan cinta."
