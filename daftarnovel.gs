@@ -55,7 +55,9 @@ function getMenuNovelKeyboard() {
         { text: "X", callback_data: "novel_list_X" },
         { text: "Y", callback_data: "novel_list_Y" },
         { text: "Z", callback_data: "novel_list_Z" },
-        { text: "Kembali ke Fitur", callback_data: "kembali_ke_fitur" },
+      ],
+      [
+        { text: "Kembali ke Fitur 🤡", callback_data: "kembali_ke_fitur" },
       ]
     ]
   };
