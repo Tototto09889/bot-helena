@@ -118,7 +118,7 @@ const daftarNovel = {
       sinopsis: "“Menjijikkan.” “Bodoh.” “Menghilang saja.” Beginilah caraku diperlakukan oleh gadis tercantik di sekolah, Aoya Yuzuki. Meskipun kata-katanya kasar, terkadang dia tersipu dan terkadang dia panik? Aku tidak tahu apa yang dia pikirkan! Tapi, entah bagaimana, sepertinya dia menyukaimu...?"
     },
     {
-      judul: "Dungeon Battle Royale ~ Since", // Judul diubah
+      judul: "Dungeon Battle Royale", // Judul diubah
       keyword: "dungeon",
       genre: "Action, Fantasy, Harem",
       sinopsis: "Setelah bereinkarnasi menjadi Raja Iblis terlemah, saya memutuskan untuk menaklukkan dunia dengan Dungeon yang diberikan kepada saya sebagai cheat!"
