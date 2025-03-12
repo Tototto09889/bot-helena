@@ -1100,7 +1100,7 @@ const daftarNovel = {
       genre: "Comedy, Fantasy",
       sinopsis: "Pekerjaan mudah yang hanya perlu dikalahkan oleh pahlawan."
     }
-  ],
+  ]
 };
 
 
