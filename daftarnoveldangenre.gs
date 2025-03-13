@@ -361,17 +361,14 @@ function getUniqueGenres() {
     return Array.from(genres).sort();
 }
 
-function getMenuGenreKeyboard(page = 1, genresPerPage = 7) {
+function getMenuGenreKeyboard() { // Pagination dihapus
     let genres = getUniqueGenres();
     let keyboard = {
         inline_keyboard: []
     };
-    let start = (page - 1) * genresPerPage;
-    let end = start + genresPerPage;
     let row = [];
-    let displayedGenres = genres.slice(start, end);
 
-    displayedGenres.forEach(genre => {
+    genres.forEach(genre => {
         row.push({ text: genre, callback_data: "genre_list_" + genre });
         if (row.length === 3) {
             keyboard.inline_keyboard.push(row);
@@ -381,28 +378,18 @@ function getMenuGenreKeyboard(page = 1, genresPerPage = 7) {
     if (row.length > 0) {
         keyboard.inline_keyboard.push(row);
     }
-
-    let paginationRow = [];
-    if (page > 1) {
-        paginationRow.push({ text: "Sebelumnya", callback_data: "daftar_genre_prev_" + (page - 1) });
-    }
-    if (end < genres.length) {
-        paginationRow.push({ text: "Selanjutnya", callback_data: "daftar_genre_next_" + (page + 1) });
-    }
-    if (paginationRow.length > 0) {
-        keyboard.inline_keyboard.push(paginationRow);
-    }
-
     keyboard.inline_keyboard.push([{ text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" }]);
     return keyboard;
 }
 
 function getNovelListGenreKeyboard(genre) {
     let tombolNovel = [];
+    let count = 0; // Batasan 8 tombol
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
-            if (novel.genre.includes(genre)) {
+            if (novel.genre.includes(genre) && count < 8) { // Batasan 8 tombol
                 tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+                count++;
             }
         });
     }
@@ -411,19 +398,16 @@ function getNovelListGenreKeyboard(genre) {
 }
 
 
-function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) {
+function getMenuNovelKeyboard() { // Pagination dihapus
     let hurufArr = Object.keys(daftarNovel);
     let keyboard = {
         inline_keyboard: []
     };
-    let start = (page - 1) * novelsPerPage;
-    let end = start + novelsPerPage;
     let row = [];
-    let displayedHuruf = hurufArr.slice(start, end);
 
-    displayedHuruf.forEach(huruf => {
+    hurufArr.forEach(huruf => {
         row.push({ text: huruf, callback_data: "novel_list_" + huruf });
-        if (row.length === 7) {
+        if (row.length === 7) { // Maksimal 7 tombol per baris (untuk abjad)
             keyboard.inline_keyboard.push(row);
             row = [];
         }
@@ -431,19 +415,6 @@ function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) {
     if (row.length > 0) {
         keyboard.inline_keyboard.push(row);
     }
-
-    let paginationRow = [];
-    if (page > 1) {
-        paginationRow.push({ text: "Sebelumnya", callback_data: "daftar_novel_prev_" + (page - 1) });
-    }
-    if (end < hurufArr.length) {
-        paginationRow.push({ text: "Selanjutnya", callback_data: "daftar_novel_next_" + (page + 1) });
-    }
-    if (paginationRow.length > 0) {
-        keyboard.inline_keyboard.push(paginationRow);
-    }
-
-
     keyboard.inline_keyboard.push([{ text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" }]);
 
     return keyboard;
@@ -452,7 +423,15 @@ function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) {
 
 function getNovelListKeyboard(huruf) {
     let novels = daftarNovel[huruf] || [];
-    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+    let tombolNovel = [];
+    let count = 0; // Batasan 8 tombol
+    for (const novel of novels) {
+        if (count < 8) { // Batasan 8 tombol
+            tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+            count++;
+        }
+    }
+
     tombolNovel.push([{ text: "Kembali ke Menu Daftar Novel 📚", callback_data: "daftar_novel" }]);
     return { inline_keyboard: tombolNovel };
 }
@@ -485,20 +464,15 @@ function getNovelPageKeyboard(judulNovel) {
 }
 
 
-let genreMenuPage = 1;
-let novelMenuPage = 1;
-
-function showGenreMenu(chatId, messageId, page = 1) {
-    genreMenuPage = page;
+function showGenreMenu(chatId, messageId) { // Page parameter dihapus
     let menuText = "<b>🎭 Daftar Genre Novel - Pilih Genre Kegelapan...</b>\n\n<i>Telusuri genre untuk menemukan kisah yang sesuai seleramu... 🖤</i>";
-    editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuGenreKeyboard(page)));
+    editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuGenreKeyboard()));
 }
 
 
-function showNovelMenu(chatId, messageId, page = 1) {
-    novelMenuPage = page;
+function showNovelMenu(chatId, messageId) { // Page parameter dihapus
     let menuText = "<b>📚 Daftar Novel - Pilih Abjad Kegelapan...</b>\n\n<i>Gulir abjad untuk menemukan kisah yang jiwamu cari... 🖤</i>";
-    editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuNovelKeyboard(page)));
+    editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuNovelKeyboard()));
 }
 
 function showNovelListPage(chatId, messageId, huruf) {
@@ -535,21 +509,9 @@ function handleCallbackQuery(callbackQuery) {
     const data = callbackQuery.data;
 
     if (data === "daftar_genre") {
-        showGenreMenu(chatId, messageId, 1);
-    } else if (data.startsWith("daftar_genre_next_")) {
-        const page = parseInt(data.split("_")[3]);
-        showGenreMenu(chatId, messageId, page);
-    } else if (data.startsWith("daftar_genre_prev_")) {
-        const page = parseInt(data.split("_")[3]);
-        showGenreMenu(chatId, messageId, page);
+        showGenreMenu(chatId, messageId); // Pagination dihapus
     } else if (data === "daftar_novel") {
-        showNovelMenu(chatId, messageId, 1);
-    } else if (data.startsWith("daftar_novel_next_")) {
-        const page = parseInt(data.split("_")[3]);
-        showNovelMenu(chatId, messageId, page);
-    } else if (data.startsWith("daftar_novel_prev_")) {
-        const page = parseInt(data.split("_")[3]);
-        showNovelMenu(chatId, messageId, page);
+        showNovelMenu(chatId, messageId); // Pagination dihapus
     }
      else if (data.startsWith("novel_list_")) {
         const huruf = data.split("_")[2];
@@ -561,17 +523,18 @@ function handleCallbackQuery(callbackQuery) {
         kirimPesan(chatId, "Kembali ke menu fitur (belum diimplementasikan dalam contoh ini).");
     } else if (data.startsWith("genre_list_")) {
         const genre = data.split("genre_list_")[1];
-        kirimPesan(chatId, `Daftar novel genre ${genre} (belum diimplementasikan dalam contoh ini).`);
+        showNovelListGenreKeyboard(chatId, messageId, genre); // Menampilkan daftar novel per genre
     }
+    // ... tambahkan case lain sesuai kebutuhan callback data lainnya ...
 }
 
-
-function editMessageText(chatId, messageId, text, keyboardMarkup) {
-    // Implementasikan fungsi editMessageText sesuai platform bot Anda
-    Logger.log(`Edit message to chat ${chatId}, messageId ${messageId}: ${text} with keyboard ${keyboardMarkup}`);
-}
-
-function kirimPesan(chatId, text) {
-    // Implementasikan fungsi kirimPesan sesuai platform bot Anda
-    Logger.log(`Send message to chat ${chatId}: ${text}`);
+function showNovelListGenreKeyboard(chatId, messageId, genre) {
+    let listNovelGenreKeyboard = getNovelListGenreKeyboard(genre);
+    if (listNovelGenreKeyboard.inline_keyboard.length <= 1) {
+        let menuText = `<b>📚 Daftar Novel - Genre ${genre} Kosong 👻</b>\n\n<i>Tidak ada arwah novel bergenre  ${genre} yang bersembunyi... Kembali ke menu utama genre.</i>`;
+        editMessageText(chatId, messageId, menuText, JSON.stringify({ inline_keyboard: [[{ text: "Kembali ke Menu Daftar Genre 🎭", callback_data: "daftar_genre" }]] }));
+    } else {
+        let menuText = `<b>📚 Daftar Novel - Genre ${genre} 🖤</b>\n\n<i>Pilih novel genre ${genre} yang memanggil jiwamu dari daftar berikut...</i>`;
+        editMessageText(chatId, messageId, menuText, JSON.stringify(listNovelGenreKeyboard));
+    }
 }
