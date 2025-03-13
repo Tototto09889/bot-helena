@@ -18,7 +18,7 @@ const daftarNovel = {
             judul: "Absolute Duo",
             keyword: "absolute duo",
             genre: "Action, Ecchi, Harem, School, Supernatural",
-            sinopsis: "Kisah ini berlatar di sebuah sekolah menengah atas khusus, Akademi Koryo, di mana para siswa yang memiliki 'Blaze' — senjata yang merupakan manifestasi dari jiwa mereka — berpasangan untuk bertarung dan belajar bersama sebagai 'Duo' dengan tujuan menjadi yang terkuat."
+            sinopsis: "Kisah ini berlatar di sebuah sekolah menengah atas khusus , Akademi Koryo , di mana para siswa yang memiliki ' Blaze ' - senjata yang merupakan manifestasi dari jiwa mereka - berpasangan untuk bertarung dan belajar bersama sebagai ' Duo ' dengan tujuan menjadi yang terkuat ."
         },
         {
             judul: "Accel World",
@@ -378,7 +378,7 @@ function getNovelListGenreKeyboard(genre) {
             }
         });
     }
-    tombolNovel.push([{ text: "Kembali ke Menu Genre 🎭", callback_data: "daftar_genre" }]); // Tombol kembali ke menu genre
+    tombolNovel.push([{ text: "Kembali ke Menu Genre 🎭", callback_data: "daftar_genre" }]); // Tombol kembali ke menu genre (MODIFIED: Kembali ke menu genre, bukan daftar genre)
     return { inline_keyboard: tombolNovel };
 }
 
@@ -453,8 +453,7 @@ function getNovelPageKeyboard(judulNovel) {
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword } // Inline query dengan keyword novel
             ],
             [
-                { text: "Kembali ke Daftar Menu " + judulNovel.charAt(0).toUpperCase(), callback_data: "novel_list_" + judulNovel.charAt(0).toUpperCase() }, // Kembali ke menu novel per huruf
-                { text: "Kembali ke Genre " + novel.genre.split(', ')[0] + " 🎭", callback_data: "genre_list_" + novel.genre.split(', ')[0].trim() } // Kembali ke menu genre novel
+                { text: "Kembali ke Menu Novel 🤡", callback_data: "daftar_novel" } // Kembali ke menu novel (MODIFIED: Langsung ke menu novel utama)
             ]
         ]
     };
@@ -474,6 +473,22 @@ function showNovelListPage(chatId, messageId, huruf) {
         editMessageText(chatId, messageId, menuText, JSON.stringify({ inline_keyboard: [[{ text: "Kembali ke Menu Novel", callback_data: "daftar_novel" }]] }));
     } else {
         let menuText = `<b>📚 Daftar Novel - Abjad ${huruf.toUpperCase()} 🖤</b>\n\n<i>Pilih novel yang memanggil jiwamu dari daftar berikut...</i>`;
+        editMessageText(chatId, messageId, menuText, JSON.stringify(listNovelKeyboard));
+    }
+}
+
+function showNovelGenreMenu(chatId, messageId) {
+    let menuText = "<b>🎭 Daftar Genre Novel - Pilih Genre Favoritmu...</b>\n\n<i>Jelajahi genre untuk menemukan novel berdasarkan preferensi jiwamu... 🖤</i>";
+    editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuGenreKeyboard()));
+}
+
+function showNovelListGenrePage(chatId, messageId, genre) {
+    let listNovelKeyboard = getNovelListGenreKeyboard(genre);
+    if (listNovelKeyboard.inline_keyboard.length <= 1) { // Hanya tombol kembali, berarti tidak ada novel di genre ini
+        let menuText = `<b>🎭 Daftar Novel - Genre ${genre} Kosong 👻</b>\n\n<i>Tidak ada arwah novel bergenre ${genre} yang bersembunyi di sini... Kembali ke menu utama genre.</i>`;
+        editMessageText(chatId, messageId, menuText, JSON.stringify({ inline_keyboard: [[{ text: "Kembali ke Menu Genre", callback_data: "daftar_genre" }]] }));
+    } else {
+        let menuText = `<b>🎭 Daftar Novel - Genre ${genre} 🖤</b>\n\n<i>Pilih novel bergenre ${genre} yang memanggil jiwamu dari daftar berikut...</i>`;
         editMessageText(chatId, messageId, menuText, JSON.stringify(listNovelKeyboard));
     }
 }
