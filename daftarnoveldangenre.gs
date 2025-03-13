@@ -574,4 +574,46 @@ function handleCallbackQuery(callbackQuery) {
         kirimPesan(chatId, `Daftar novel genre ${genre} (belum diimplementasikan dalam contoh ini).`);
     }
     // ... tambahkan case lain sesuai kebutuhan callback data lainnya ...
-} 
+}
+
+
+// Fungsi editMessageText dan kirimPesan (perlu disesuaikan dengan bot Anda, contoh implementasi)
+function editMessageText(chatId, messageId, text, keyboardMarkup) {
+    // Implementasikan fungsi editMessageText sesuai dengan platform bot Anda
+    // Contoh (untuk platform yang mendukung):
+    Logger.log(`Edit message to chat ${chatId}, messageId ${messageId}: ${text} with keyboard ${keyboardMarkup}`);
+    // Telegram Bot API example:
+    /*
+    UrlFetchApp.fetch(`https://api.telegram.org/botYOUR_BOT_TOKEN/editMessageText`, {
+      'method': 'post',
+      'payload': {
+        'chat_id': chatId,
+        'message_id': messageId,
+        'text': text,
+        'parse_mode': 'HTML',
+        'reply_markup': keyboardMarkup
+      }
+    });
+    */
+}
+
+function kirimPesan(chatId, text) {
+    // Implementasikan fungsi kirimPesan sesuai dengan platform bot Anda
+    // Contoh (untuk platform yang mendukung):
+    Logger.log(`Send message to chat ${chatId}: ${text}`);
+     // Telegram Bot API example:
+    /*
+    UrlFetchApp.fetch(`https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage`, {
+      'method': 'post',
+      'payload': {
+        'chat_id': chatId,
+        'text': text,
+        'parse_mode': 'HTML'
+      }
+    });
+    */
+}
+
+
+// Contoh pemanggilan fungsi untuk menampilkan menu novel pertama kali
+// showNovelMenu(CHAT_ID, MESSAGE_ID);
