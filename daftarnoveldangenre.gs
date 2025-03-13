@@ -69,7 +69,7 @@ const daftarNovel = {
             sinopsis: "Light Yagami, seorang siswa SMA jenius, menemukan buku catatan misterius 'Death Note' yang jatuh dari langit. Buku itu memiliki kekuatan untuk membunuh siapa pun yang namanya ditulis di dalamnya. Light memutuskan untuk menggunakan Death Note untuk menciptakan dunia baru tanpa kejahatan dan menjadi dewa dunia baru."
         },
         {
-            judul: "DanMachi (Dungeon ni Deai wo Motomeru no wa Machigatteiru Darouka)",
+            judul: "DanMachi",
             keyword: "danmachi",
             genre: "Action, Adventure, Comedy, Fantasy, Romance, Harem",
             sinopsis: "Di kota Orario, para petualang berkumpul untuk menjelajahi 'Dungeon', labirin bawah tanah yang penuh monster. Bell Cranel, seorang petualang pemula, bergabung dengan Familia Hestia dan bertujuan untuk menjadi petualang terhebat. Dia bertemu dengan dewi Hestia dan petualang wanita cantik Aiz Wallenstein, dan petualangannya dimulai."
@@ -77,7 +77,7 @@ const daftarNovel = {
     ],
     "E": [
         {
-            judul: "Erased (Boku dake ga Inai Machi)",
+            judul: "Erased",
             keyword: "erased",
             genre: "Mystery, Psychological, Seinen, Supernatural",
             sinopsis: "Satoru Fujinuma memiliki kemampuan 'Revival', yang membuatnya dapat kembali ke masa lalu sesaat sebelum kejadian buruk terjadi. Suatu hari, dia kembali ke masa lalu 18 tahun untuk mencegah pembunuhan teman-teman sekelasnya saat SD dan menyelamatkan ibunya di masa sekarang."
@@ -91,7 +91,7 @@ const daftarNovel = {
             sinopsis: "Fate/Zero adalah prekuel dari Fate/stay night yang menceritakan Perang Cawan Suci Keempat di Fuyuki City. Tujuh Master memanggil tujuh Heroic Spirit (Roh Pahlawan) untuk bertarung dalam pertempuran royale di mana pemenangnya akan diberikan Cawan Suci, artefak mahakuasa yang dapat mengabulkan keinginan apa pun."
         },
         {
-            judul: "Full Metal Panic",
+            judul: "Full Metal Panic!",
             keyword: "full metal panic",
             genre: "Action, Comedy, Sci-Fi, Mecha, Military, School",
             sinopsis: "Sousuke Sagara, seorang sersan militer berusia 17 tahun dari organisasi rahasia Mithril, ditugaskan untuk melindungi Kaname Chidori, seorang siswi SMA yang menjadi target organisasi teroris. Sousuke menyamar sebagai siswa SMA dan mencoba beradaptasi dengan kehidupan sekolah sambil melindungi Kaname dari bahaya."
@@ -155,13 +155,13 @@ const daftarNovel = {
             sinopsis: "Akademi Hyakkaou adalah sekolah swasta elit untuk anak-anak orang kaya dan berpengaruh. Di sekolah ini, hierarki siswa ditentukan oleh kemampuan berjudi mereka. Yumeko Jabami, seorang siswa pindahan misterius, datang ke sekolah dan mengacaukan hierarki yang ada dengan kemampuan judinya yang gila dan obsesinya terhadap risiko."
         },
         {
-            judul: "Konosuba (Kono Subarashii Sekai ni Shukufuku wo)",
+            judul: "Konosuba",
             keyword: "konosuba",
             genre: "Adventure, Comedy, Fantasy, Isekai",
             sinopsis: "Kazuma Satou, seorang NEET yang menyukai game, meninggal dalam kecelakaan lalu lintas yang konyol. Dia dihidupkan kembali di dunia lain oleh dewi Aqua. Dia diberi pilihan untuk membawa satu item bersamanya ke dunia baru, dan dia memilih Aqua sendiri. Bersama-sama, mereka memulai petualangan di dunia fantasi yang penuh dengan masalah dan kekonyolan."
         },
         {
-            judul: "Kiseijuu: Sei no Kakuritsu (Parasyte -the maxim-)",
+            judul: "Kiseijuu: Sei no Kakuritsu",
             keyword: "kiseijuu",
             genre: "Sci-Fi, Action, Horror, Psychological, Seinen",
             sinopsis: "Parasit alien datang ke Bumi dan mulai mengambil alih tubuh manusia. Shinichi Izumi, seorang siswa SMA, menjadi korban parasit, tetapi parasit itu hanya mengambil alih tangan kanannya dan gagal mengambil alih otaknya. Shinichi dan parasit di tangannya, Migi, harus bekerja sama untuk bertahan hidup dan melawan parasit lain yang mengancam umat manusia."
@@ -175,7 +175,7 @@ const daftarNovel = {
             sinopsis: "Saat update game online populer 'Elder Tale' dirilis, puluhan ribu pemain Jepang terjebak di dalam game. Shiroe, seorang veteran game, bersama teman-temannya, Akatsuki dan Naotsugu, mencoba bertahan hidup di dunia game yang menjadi kenyataan dan mencari cara untuk kembali ke dunia nyata."
         },
         {
-            judul: "Love, Chunibyo & Other Delusions (Chuunibyou demo Koi ga Shitai)",
+            judul: "Love, Chunibyo & Other Delusions!",
             keyword: "chunibyo",
             genre: "Comedy, Romance, School, Slice of Life",
             sinopsis: "Yuuta Togashi adalah mantan 'chuunibyou' (sindrom kelas 8) yang ingin melupakan masa lalunya yang memalukan. Namun, saat dia masuk SMA, dia bertemu dengan Rikka Takanashi, seorang 'chuunibyou' aktif yang membuatnya terlibat kembali dengan dunia delusi dan fantasi."
@@ -183,19 +183,19 @@ const daftarNovel = {
     ],
     "M": [
         {
-            judul: "Mushoku Tensei: Isekai Ittara Honki Dasu (Jobless Reincarnation)",
+            judul: "Mushoku Tensei: Jobless Reincarnation",
             keyword: "mushoku tensei",
             genre: "Isekai, Drama, Fantasy",
             sinopsis: "Seorang NEET berusia 34 tahun yang tidak memiliki tujuan hidup meninggal dalam kecelakaan lalu lintas dan bereinkarnasi ke dunia lain sebagai bayi bernama Rudeus Greyrat. Dengan ingatan dari kehidupan sebelumnya, Rudeus bertekad untuk menjalani kehidupan yang serius di dunia baru dan memperbaiki kesalahan masa lalunya."
         },
         {
-            judul: "My Teen Romantic Comedy SNAFU (Yahari Ore no Seishun Love Come wa Machigatteiru.)",
+            judul: "My Teen Romantic Comedy SNAFU",
             keyword: "snafu",
             genre: "Comedy, Romance, School, Slice of Life",
             sinopsis: "Hachiman Hikigaya adalah siswa SMA penyendiri yang sinis dan pesimis tentang kehidupan sosial. Dia dipaksa untuk bergabung dengan Klub Relawan oleh gurunya dan bertemu dengan Yukino Yukinoshita, gadis tercantik dan terpintar di sekolah. Bersama-sama, mereka membantu siswa lain memecahkan masalah mereka, tetapi mereka juga menghadapi masalah mereka sendiri."
         },
          {
-            judul: "Mirai Nikki (Future Diary)",
+            judul: "Mirai Nikki",
             keyword: "mirai nikki",
             genre: "Action, Mystery, Psychological, Supernatural, Thriller",
             sinopsis: "Yukiteru Amano, seorang siswa SMP penyendiri, tiba-tiba terlibat dalam permainan bertahan hidup yang diadakan oleh Dewa Waktu dan Ruang, Deus Ex Machina. Dia dan 11 orang lainnya diberikan 'Future Diary', buku catatan yang dapat memprediksi masa depan, dan harus saling membunuh untuk menjadi pengganti Deus."
@@ -236,19 +236,19 @@ const daftarNovel = {
     ],
     "R": [
         {
-            judul: "Re:Zero kara Hajimeru Isekai Seikatsu (Re: Life in a different world from zero)",
+            judul: "Re:Zero",
             keyword: "re zero",
             genre: "Isekai, Action, Adventure, Drama, Fantasy, Psychological, Thriller",
             sinopsis: "Subaru Natsuki tiba-tiba dipanggil ke dunia lain saat dalam perjalanan pulang dari toko serba ada. Di dunia baru yang penuh fantasi, dia bertemu dengan gadis berambut perak bernama Emilia dan terlibat dalam konflik yang berbahaya. Subaru mendapatkan kemampuan 'Return by Death' yang memungkinkannya untuk kembali ke titik waktu tertentu setelah mati, dan dia menggunakan kemampuan ini untuk mengubah takdir dan melindungi orang-orang yang dia sayangi."
         },
         {
-            judul: "Rascal Does Not Dream of Bunny Girl Senpai (Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai)",
+            judul: "Rascal Does Not Dream of Bunny Girl Senpai",
             keyword: "bunny girl senpai",
             genre: "Comedy, Romance, School, Supernatural",
             sinopsis: "Sakuta Azusagawa bertemu dengan Mai Sakurajima, seorang aktris terkenal yang mengenakan kostum bunny girl di perpustakaan. Mai menderita 'Puberty Syndrome', fenomena misterius yang membuat keberadaannya menghilang dari ingatan orang lain. Sakuta bertekad untuk membantu Mai memecahkan misteri Puberty Syndrome dan menyelamatkannya dari menghilang."
         },
         {
-            judul: "Rokudenashi Majutsu Koushi to Akashic Records (Akashic Records of Bastard Magic Instructor)",
+            judul: "Rokudenashi Majutsu Koushi to Akashic Records",
             keyword: "rokudenashi",
             genre: "Action, Fantasy, School",
             sinopsis: "Glenn Radars adalah guru pengganti yang malas dan tidak kompeten di Akademi Sihir Alzano. Namun, di balik penampilannya yang acuh tak acuh, dia memiliki kemampuan sihir yang luar biasa dan masa lalu yang misterius. Dia menjadi guru kelas 2-F dan harus menghadapi berbagai masalah dan tantangan bersama murid-muridnya, termasuk Sistine Fibel dan Rumia Tingel."
@@ -262,19 +262,19 @@ const daftarNovel = {
             sinopsis: "Pada tahun 2022, game online virtual reality massively multiplayer online role-playing game (VRMMORPG) 'Sword Art Online' dirilis. Kazuto 'Kirito' Kirigaya adalah salah satu dari ribuan pemain yang terjebak di dalam game. Jika mereka mati di dalam game, mereka juga akan mati di dunia nyata. Kirito harus bertahan hidup dan menyelesaikan game untuk kembali ke dunia nyata."
         },
         {
-            judul: "SteinsGate",
+            judul: "Steins;Gate",
             keyword: "steins gate",
             genre: "Sci-Fi, Psychological, Thriller",
             sinopsis: "Rintaro Okabe adalah seorang ilmuwan gila yang mendirikan 'Laboratorium Gadget Masa Depan' di apartemennya di Akihabara. Bersama teman-temannya, dia menciptakan 'Mesin Waktu' secara tidak sengaja. Mereka mulai bereksperimen dengan mesin waktu dan mengubah masa lalu, tetapi mereka tidak menyadari konsekuensi mengerikan yang akan menimpa mereka."
         },
         {
-            judul: "Shingeki no Kyojin (Attack on Titan)",
+            judul: "Attack on Titan",
             keyword: "attack on titan",
             genre: "Action, Horror, Military, Mystery, Super Power",
             sinopsis: "Berabad-abad yang lalu, umat manusia hampir punah akibat raksasa humanoid 'Titan'. Manusia yang tersisa berlindung di dalam tembok raksasa. Eren Yeager, Mikasa Ackerman, dan Armin Arlert adalah anak-anak yang hidup di dalam tembok. Saat tembok dihancurkan oleh Titan Colossal, mereka menyaksikan kehancuran dan kematian ibu Eren. Eren bersumpah untuk membalas dendam dan membunuh semua Titan."
         },
         {
-            judul: "Shield Hero (Tate no Yuusha no Nariagari)",
+            judul: "Shield Hero",
             keyword: "shield hero",
             genre: "Action, Adventure, Fantasy, Isekai",
             sinopsis: "Naofumi Iwatani dipanggil ke dunia lain sebagai 'Pahlawan Perisai', salah satu dari empat Pahlawan Kardinal. Namun, dia dikhianati dan difitnah oleh rekan-rekannya dan masyarakat. Naofumi yang putus asa dan marah bertekad untuk menjadi kuat dan membalas dendam pada mereka yang telah mengkhianatinya."
@@ -282,7 +282,7 @@ const daftarNovel = {
     ],
     "T": [
         {
-            judul: "The Devil is a Part-Timer (Hataraku Maou-sama)",
+            judul: "The Devil is a Part-Timer!",
             keyword: "devil is a part timer",
             genre: "Comedy, Fantasy, Romance",
             sinopsis: "Raja Iblis Sadao Maou terpaksa melarikan diri ke dunia manusia setelah dikalahkan oleh Pahlawan Emilia Justina. Di dunia manusia, dia kehilangan semua kekuatan sihirnya dan harus bekerja paruh waktu di restoran cepat saji 'MgRonald' untuk bertahan hidup. Kisah komedi Raja Iblis yang bekerja paruh waktu dan mencoba beradaptasi dengan kehidupan manusia dimulai."
@@ -294,7 +294,7 @@ const daftarNovel = {
             sinopsis: "Tokyo dihantui oleh 'Ghoul', makhluk misterius yang memakan daging manusia. Ken Kaneki, seorang mahasiswa biasa, menjadi setengah ghoul setelah selamat dari serangan ghoul. Dia terjebak di antara dunia manusia dan ghoul, dan harus berjuang untuk bertahan hidup dan menemukan tempatnya di dunia yang kejam."
         },
         {
-            judul: "That Time I Got Reincarnated as a Slime (Tensei shitara Slime Datta Ken)",
+            judul: "That Time I Got Reincarnated as a Slime",
             keyword: "slime",
             genre: "Fantasy, Isekai, Adventure, Comedy",
             sinopsis: "Satoru Mikami, seorang karyawan kantor berusia 37 tahun yang tidak memiliki pacar, terbunuh oleh perampok jalanan. Dia bereinkarnasi ke dunia lain sebagai slime. Meskipun menjadi slime lemah, dia mendapatkan kemampuan unik 'Predator' dan 'Great Sage' yang membuatnya menjadi semakin kuat. Rimuru Tempest, nama barunya sebagai slime, memulai petualangan untuk membangun negara yang damai di dunia monster."
@@ -324,7 +324,7 @@ const daftarNovel = {
     ],
     "Y": [
         {
-            judul: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)", // Duplikat judul, tapi sengaja untuk contoh
+            judul: "Classroom of the Elite", // Duplikat judul, tapi sengaja untuk contoh
             keyword: "classroom of the elite",
             genre: "School, Psychological, Drama",
             sinopsis: "(Sinopsis sama dengan Classroom of the Elite di atas)"
@@ -334,18 +334,6 @@ const daftarNovel = {
         // Tidak ada novel dengan awalan huruf Z
     ]
 };
-
-// Bersihkan judul novel dari karakter "!" dan "~"
-function cleanNovelTitles() {
-    for (const huruf in daftarNovel) {
-        daftarNovel[huruf].forEach(novel => {
-            novel.judul = novel.judul.replace(/[!~]/g, '');
-        });
-    }
-}
-
-cleanNovelTitles(); // Panggil fungsi pembersihan judul saat inisialisasi
-
 
 // Fungsi untuk membuat daftar genre unik dan terurut dari daftar novel
 function getUniqueGenres() {
@@ -397,14 +385,47 @@ function getNovelListGenreKeyboard(genre) {
 
 function getMenuNovelKeyboard() {
     let keyboard = {
-        inline_keyboard: []
+        inline_keyboard: [
+            [
+                { text: "A", callback_data: "novel_list_A" },
+                { text: "B", callback_data: "novel_list_B" },
+                { text: "C", callback_data: "novel_list_C" },
+                { text: "D", callback_data: "novel_list_D" },
+                { text: "E", callback_data: "novel_list_E" },
+                { text: "F", callback_data: "novel_list_F" },
+                { text: "G", callback_data: "novel_list_G" },
+            ],
+            [
+                { text: "H", callback_data: "novel_list_H" },
+                { text: "I", callback_data: "novel_list_I" },
+                { text: "J", callback_data: "novel_list_J" },
+                { text: "K", callback_data: "novel_list_K" },
+                { text: "L", callback_data: "novel_list_L" },
+                { text: "M", callback_data: "novel_list_M" },
+                { text: "N", callback_data: "novel_list_N" },
+            ],
+            [
+                { text: "O", callback_data: "novel_list_O" },
+                { text: "P", callback_data: "novel_list_P" },
+                { text: "Q", callback_data: "novel_list_Q" },
+                { text: "R", callback_data: "novel_list_R" },
+                { text: "S", callback_data: "novel_list_S" },
+                { text: "T", callback_data: "novel_list_T" },
+                { text: "U", callback_data: "novel_list_U" },
+            ],
+            [
+                { text: "V", callback_data: "novel_list_V" },
+                { text: "W", callback_data: "novel_list_W" },
+                { text: "X", callback_data: "novel_list_X" },
+                { text: "Y", callback_data: "novel_list_Y" },
+                { text: "Z", callback_data: "novel_list_Z" },
+                { text: "#", callback_data: "novel_list_#" },
+            ],
+            [
+                { text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" },
+            ]
+        ]
     };
-    const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"];
-    letters.forEach(letter => {
-        keyboard.inline_keyboard.push([{ text: letter, callback_data: "novel_list_" + letter }]);
-    });
-    keyboard.inline_keyboard.push([{ text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" }]);
-
     return keyboard;
 }
 
@@ -432,7 +453,9 @@ function getNovelPageKeyboard(judulNovel) {
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword } // Inline query dengan keyword novel
             ],
             [
-                { text: "Kembali ke Daftar Novel 📚", callback_data: "daftar_novel" }, // Kembali ke menu utama Daftar Novel
+                { text: "Kembali ke Daftar Novel 📚", callback_data: "daftar_novel" } // Kembali ke menu utama Daftar Novel
+            ],
+             [
                 { text: "Kembali ke Menu Daftar Genre 🎭", callback_data: "daftar_genre" } // Kembali ke menu genre novel (diperbaiki)
             ]
         ]
@@ -473,3 +496,22 @@ function showNovelPage(chatId, messageId, judulNovel) {
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
     editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
+
+
+function cleanUpNovelTitles() {
+    const specialCharsRegex = /[~!@#$%^&*()_+{}\[\]:;"'<>,.?/\\|`-]/g; // Regex untuk karakter khusus yang ingin dihapus
+    const maxLength = 30; // Panjang maksimum judul novel
+
+    for (const huruf in daftarNovel) {
+        daftarNovel[huruf].forEach(novel => {
+            // Hapus karakter khusus
+            novel.judul = novel.judul.replace(specialCharsRegex, '').trim();
+            // Singkat judul jika terlalu panjang
+            if (novel.judul.length > maxLength) {
+                novel.judul = novel.judul.substring(0, maxLength) + "...";
+            }
+        });
+    }
+}
+
+cleanUpNovelTitles();
