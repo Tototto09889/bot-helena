@@ -1192,7 +1192,7 @@ function getNovelListGenreKeyboard(genre, page = 1) {
     const totalPages = Math.ceil(novelGenreList.length / novelsPerPage);
 
     paginatedNovels.forEach(novel => {
-        tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+        tombolNovel.push([{ text: novel.judul, callback_data: `novel_page_genre_${genre}_${novel.judul}` }]); // Tambah genre ke callback data
     });
 
     let paginationRow = [];
@@ -1266,7 +1266,7 @@ function getNovelListKeyboard(huruf, page = 1) {
     const paginatedNovels = novels.slice(start, end);
     const totalPages = Math.ceil(novels.length / novelsPerPage);
 
-    let tombolNovel = paginatedNovels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+    let tombolNovel = paginatedNovels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]); // tetap ke menu novel biasa
 
     if (totalPages > 1) {
         let paginationRow = [];
@@ -1284,7 +1284,7 @@ function getNovelListKeyboard(huruf, page = 1) {
     return { inline_keyboard: tombolNovel };
 }
 
-function getNovelPageKeyboard(judulNovel) {
+function getNovelPageKeyboard(judulNovel, menuType = 'daftar_novel', genre = null) { // Tambah parameter menuType dan genre
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1295,17 +1295,19 @@ function getNovelPageKeyboard(judulNovel) {
         return getMenuNovelKeyboard();
     }
 
+    let backCallbackData = 'daftar_novel'; // Default kembali ke daftar novel
+    if (menuType === 'genre_list' && genre) {
+        backCallbackData = `genre_list_${genre}_page_1`; // Kembali ke daftar genre jika dari menu genre
+    }
+
     let keyboard = {
         inline_keyboard: [
             [
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword }
             ],
             [
-                { text: "Kembali ke Daftar Novel 📚", callback_data: "daftar_novel" }
+                { text: "Kembali ke Menu Sebelumnya ↩️", callback_data: backCallbackData } // Tombol kembali dinamis
             ],
-             [
-                { text: "Kembali ke Menu Daftar Genre 🎭", callback_data: "daftar_genre" }
-            ]
         ]
     };
     return keyboard;
@@ -1348,7 +1350,7 @@ function showNovelListGenrePage(chatId, messageId, genre, page = 1) {
 }
 
 
-function showNovelPage(chatId, messageId, judulNovel) {
+function showNovelPage(chatId, messageId, judulNovel, menuType = 'daftar_novel', genre = null) { // Tambah parameter menuType dan genre
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1361,7 +1363,7 @@ function showNovelPage(chatId, messageId, judulNovel) {
     }
 
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
-    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
+    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel, menuType, genre))); // Kirim menuType dan genre
 }
 
 
