@@ -1,4 +1,4 @@
-Const daftarNovel = {
+const daftarNovel = {
   "#": [
     {
       judul: "10-nen Goshi no HikiNEET", // Judul diubah
