@@ -202,17 +202,3 @@ function showNovelPage(chatId, messageId, judulNovel) {
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
     editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
-
-// ... (Tambahkan fungsi editMessageText dan kirimPesan jika belum ada)
-// Fungsi palsu untuk simulasi pengiriman dan pengeditan pesan (Ganti dengan implementasi sesuai dengan platform Anda)
-function editMessageText(chatId, messageId, text, keyboard) {
-  // Simulasi pengeditan pesan
-  console.log(`Mengedit pesan ${messageId} di chat ${chatId}: ${text} dengan keyboard ${keyboard}`);
-}
-
-function kirimPesan(chatId, text) {
-  // Simulasi pengiriman pesan
-  console.log(`Mengirim pesan ke chat ${chatId}: ${text}`);
-}
-
-// ... (Kode lainnya yang Anda gunakan untuk menjalankan bot)
