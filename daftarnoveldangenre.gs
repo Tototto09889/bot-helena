@@ -91,7 +91,7 @@ const daftarNovel = {
             sinopsis: "Fate/Zero adalah prekuel dari Fate/stay night yang menceritakan Perang Cawan Suci Keempat di Fuyuki City. Tujuh Master memanggil tujuh Heroic Spirit (Roh Pahlawan) untuk bertarung dalam pertempuran royale di mana pemenangnya akan diberikan Cawan Suci, artefak mahakuasa yang dapat mengabulkan keinginan apa pun."
         },
         {
-            judul: "Full Metal Panic!",
+            judul: "Full Metal Panic",
             keyword: "full metal panic",
             genre: "Action, Comedy, Sci-Fi, Mecha, Military, School",
             sinopsis: "Sousuke Sagara, seorang sersan militer berusia 17 tahun dari organisasi rahasia Mithril, ditugaskan untuk melindungi Kaname Chidori, seorang siswi SMA yang menjadi target organisasi teroris. Sousuke menyamar sebagai siswa SMA dan mencoba beradaptasi dengan kehidupan sekolah sambil melindungi Kaname dari bahaya."
@@ -155,7 +155,7 @@ const daftarNovel = {
             sinopsis: "Akademi Hyakkaou adalah sekolah swasta elit untuk anak-anak orang kaya dan berpengaruh. Di sekolah ini, hierarki siswa ditentukan oleh kemampuan berjudi mereka. Yumeko Jabami, seorang siswa pindahan misterius, datang ke sekolah dan mengacaukan hierarki yang ada dengan kemampuan judinya yang gila dan obsesinya terhadap risiko."
         },
         {
-            judul: "Konosuba (Kono Subarashii Sekai ni Shukufuku wo!)",
+            judul: "Konosuba (Kono Subarashii Sekai ni Shukufuku wo)",
             keyword: "konosuba",
             genre: "Adventure, Comedy, Fantasy, Isekai",
             sinopsis: "Kazuma Satou, seorang NEET yang menyukai game, meninggal dalam kecelakaan lalu lintas yang konyol. Dia dihidupkan kembali di dunia lain oleh dewi Aqua. Dia diberi pilihan untuk membawa satu item bersamanya ke dunia baru, dan dia memilih Aqua sendiri. Bersama-sama, mereka memulai petualangan di dunia fantasi yang penuh dengan masalah dan kekonyolan."
@@ -175,7 +175,7 @@ const daftarNovel = {
             sinopsis: "Saat update game online populer 'Elder Tale' dirilis, puluhan ribu pemain Jepang terjebak di dalam game. Shiroe, seorang veteran game, bersama teman-temannya, Akatsuki dan Naotsugu, mencoba bertahan hidup di dunia game yang menjadi kenyataan dan mencari cara untuk kembali ke dunia nyata."
         },
         {
-            judul: "Love, Chunibyo & Other Delusions! (Chuunibyou demo Koi ga Shitai!)",
+            judul: "Love, Chunibyo & Other Delusions (Chuunibyou demo Koi ga Shitai)",
             keyword: "chunibyo",
             genre: "Comedy, Romance, School, Slice of Life",
             sinopsis: "Yuuta Togashi adalah mantan 'chuunibyou' (sindrom kelas 8) yang ingin melupakan masa lalunya yang memalukan. Namun, saat dia masuk SMA, dia bertemu dengan Rikka Takanashi, seorang 'chuunibyou' aktif yang membuatnya terlibat kembali dengan dunia delusi dan fantasi."
@@ -262,7 +262,7 @@ const daftarNovel = {
             sinopsis: "Pada tahun 2022, game online virtual reality massively multiplayer online role-playing game (VRMMORPG) 'Sword Art Online' dirilis. Kazuto 'Kirito' Kirigaya adalah salah satu dari ribuan pemain yang terjebak di dalam game. Jika mereka mati di dalam game, mereka juga akan mati di dunia nyata. Kirito harus bertahan hidup dan menyelesaikan game untuk kembali ke dunia nyata."
         },
         {
-            judul: "Steins;Gate",
+            judul: "SteinsGate",
             keyword: "steins gate",
             genre: "Sci-Fi, Psychological, Thriller",
             sinopsis: "Rintaro Okabe adalah seorang ilmuwan gila yang mendirikan 'Laboratorium Gadget Masa Depan' di apartemennya di Akihabara. Bersama teman-temannya, dia menciptakan 'Mesin Waktu' secara tidak sengaja. Mereka mulai bereksperimen dengan mesin waktu dan mengubah masa lalu, tetapi mereka tidak menyadari konsekuensi mengerikan yang akan menimpa mereka."
@@ -282,7 +282,7 @@ const daftarNovel = {
     ],
     "T": [
         {
-            judul: "The Devil is a Part-Timer! (Hataraku Maou-sama!)",
+            judul: "The Devil is a Part-Timer (Hataraku Maou-sama)",
             keyword: "devil is a part timer",
             genre: "Comedy, Fantasy, Romance",
             sinopsis: "Raja Iblis Sadao Maou terpaksa melarikan diri ke dunia manusia setelah dikalahkan oleh Pahlawan Emilia Justina. Di dunia manusia, dia kehilangan semua kekuatan sihirnya dan harus bekerja paruh waktu di restoran cepat saji 'MgRonald' untuk bertahan hidup. Kisah komedi Raja Iblis yang bekerja paruh waktu dan mencoba beradaptasi dengan kehidupan manusia dimulai."
@@ -298,12 +298,6 @@ const daftarNovel = {
             keyword: "slime",
             genre: "Fantasy, Isekai, Adventure, Comedy",
             sinopsis: "Satoru Mikami, seorang karyawan kantor berusia 37 tahun yang tidak memiliki pacar, terbunuh oleh perampok jalanan. Dia bereinkarnasi ke dunia lain sebagai slime. Meskipun menjadi slime lemah, dia mendapatkan kemampuan unik 'Predator' dan 'Great Sage' yang membuatnya menjadi semakin kuat. Rimuru Tempest, nama barunya sebagai slime, memulai petualangan untuk membangun negara yang damai di dunia monster."
-        },
-         {
-            judul: "The Irregular at Magic High School ~Mahouka Koukou no Rettousei~",
-            keyword: "mahouka koukou no rettousei",
-            genre: "Sci-Fi, Magic, School, Supernatural, Romance",
-            sinopsis: "Di abad ke-21, sihir telah menjadi teknologi. Tatsuya Shiba dan Miyuki Shiba adalah saudara kandung yang masuk ke SMA Sihir. Tatsuya dianggap 'inferior' karena kemampuan sihirnya yang rendah, sementara Miyuki adalah siswa berprestasi. Namun, Tatsuya memiliki kemampuan tersembunyi yang luar biasa."
         }
     ],
     "U": [
@@ -330,7 +324,7 @@ const daftarNovel = {
     ],
     "Y": [
         {
-            judul: "Youkoso Jitsuryokushijou Shugi no Kyoushitsu e (Classroom of the Elite)", // Duplikat judul, tapi sengaja untuk contoh
+            judul: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)", // Duplikat judul, tapi sengaja untuk contoh
             keyword: "classroom of the elite",
             genre: "School, Psychological, Drama",
             sinopsis: "(Sinopsis sama dengan Classroom of the Elite di atas)"
@@ -340,6 +334,18 @@ const daftarNovel = {
         // Tidak ada novel dengan awalan huruf Z
     ]
 };
+
+// Bersihkan judul novel dari karakter "!" dan "~"
+function cleanNovelTitles() {
+    for (const huruf in daftarNovel) {
+        daftarNovel[huruf].forEach(novel => {
+            novel.judul = novel.judul.replace(/[!~]/g, '');
+        });
+    }
+}
+
+cleanNovelTitles(); // Panggil fungsi pembersihan judul saat inisialisasi
+
 
 // Fungsi untuk membuat daftar genre unik dan terurut dari daftar novel
 function getUniqueGenres() {
@@ -380,7 +386,7 @@ function getNovelListGenreKeyboard(genre) {
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
             if (novel.genre.includes(genre)) {
-                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]); // Menggunakan judul novel langsung di callback_data
+                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
             }
         });
     }
@@ -391,53 +397,20 @@ function getNovelListGenreKeyboard(genre) {
 
 function getMenuNovelKeyboard() {
     let keyboard = {
-        inline_keyboard: [
-            [
-                { text: "A", callback_data: "novel_list_A" },
-                { text: "B", callback_data: "novel_list_B" },
-                { text: "C", callback_data: "novel_list_C" },
-                { text: "D", callback_data: "novel_list_D" },
-                { text: "E", callback_data: "novel_list_E" },
-                { text: "F", callback_data: "novel_list_F" },
-                { text: "G", callback_data: "novel_list_G" },
-            ],
-            [
-                { text: "H", callback_data: "novel_list_H" },
-                { text: "I", callback_data: "novel_list_I" },
-                { text: "J", callback_data: "novel_list_J" },
-                { text: "K", callback_data: "novel_list_K" },
-                { text: "L", callback_data: "novel_list_L" },
-                { text: "M", callback_data: "novel_list_M" },
-                { text: "N", callback_data: "novel_list_N" },
-            ],
-            [
-                { text: "O", callback_data: "novel_list_O" },
-                { text: "P", callback_data: "novel_list_P" },
-                { text: "Q", callback_data: "novel_list_Q" },
-                { text: "R", callback_data: "novel_list_R" },
-                { text: "S", callback_data: "novel_list_S" },
-                { text: "T", callback_data: "novel_list_T" },
-                { text: "U", callback_data: "novel_list_U" },
-            ],
-            [
-                { text: "V", callback_data: "novel_list_V" },
-                { text: "W", callback_data: "novel_list_W" },
-                { text: "X", callback_data: "novel_list_X" },
-                { text: "Y", callback_data: "novel_list_Y" },
-                { text: "Z", callback_data: "novel_list_Z" },
-                { text: "#", callback_data: "novel_list_#" },
-            ],
-            [
-                { text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" },
-            ]
-        ]
+        inline_keyboard: []
     };
+    const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"];
+    letters.forEach(letter => {
+        keyboard.inline_keyboard.push([{ text: letter, callback_data: "novel_list_" + letter }]);
+    });
+    keyboard.inline_keyboard.push([{ text: "Kembali ke Menu Fitur 🤡", callback_data: "kembali_ke_fitur" }]);
+
     return keyboard;
 }
 
 function getNovelListKeyboard(huruf) {
     let novels = daftarNovel[huruf] || [];
-    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]); // Menggunakan judul novel langsung di callback_data
+    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
     tombolNovel.push([{ text: "Kembali ke Menu Daftar Novel 📚", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
     return { inline_keyboard: tombolNovel };
 }
