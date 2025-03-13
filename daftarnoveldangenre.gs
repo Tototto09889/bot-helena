@@ -696,9 +696,432 @@ const daftarNovel = {
             genre: ["Action", "Adventure", "Fantasy", "Game", "Supernatural"],
             sinopsis: "Ketika MMORPG populer 'Yggdrasil' ditutup, Momonga, seorang pemain yang kuat, menemukan dirinya terjebak di dunia game sebagai avatar kerangkanya, Ainz Ooal Gown. Dia memutuskan untuk menaklukkan dunia baru ini."
         }
+    ],
+    "P": [
+        {
+            judul: "Psycho Love Comedy",
+            keyword: "Psycho Love Comedy",
+            genre: ["Comedy", "Romance", "Psychological"],
+            sinopsis: "Sebuah kisah komedi romantis dengan elemen psikologis, kemungkinan besar berfokus pada hubungan yang tidak biasa atau karakter dengan keunikan psikologis."
+        }
+    ],
+    "R": [
+        {
+            judul: "Rakudai Kishi no Cavalry",
+            keyword: "Rakudai Kishi no",
+            genre: ["Action", "Ecchi", "Fantasy", "Romance", "School"],
+            sinopsis: "Ikki Kurogane, seorang 'Ksatria Gagal,' membuktikan dirinya di sekolah ksatria sihir. Dia bertujuan untuk menjadi seorang Ksatria Sejati meskipun dianggap sebagai yang terlemah."
+        },
+        {
+            judul: "Re:Zero kara Hajimeru Isekai Seikatsu",
+            keyword: "Re:Zero kara Hajimeru",
+            genre: ["Action", "Adventure", "Drama", "Fantasy", "Psychological", "Thriller"],
+            sinopsis: "Natsuki Subaru dipindahkan ke dunia lain dan mendapatkan kemampuan untuk kembali dari kematian. Dia menggunakan kemampuan ini untuk melindungi orang-orang yang dicintainya dan mengatasi takdir yang kejam."
+        },
+        {
+            judul: "Reborn as a Space Mercenary: I Woke Up Piloting the Strongest Starship!",
+            keyword: "Reborn as a",
+            genre: ["Sci-Fi", "Action", "Adventure", "Mecha"],
+            sinopsis: "Seorang pria bereinkarnasi sebagai tentara bayaran luar angkasa dan terbangun dengan mengendalikan pesawat ruang angkasa terkuat. Dia memulai petualangan di galaksi sebagai tentara bayaran."
+        },
+        {
+            judul: "Reign of the Seven Spellblades",
+            keyword: "Reign of the",
+            genre: ["Fantasy", "Action", "School"],
+            sinopsis: "Di sekolah sihir Kimberly, siswa baru menghadapi bahaya dan misteri. Cerita ini mengikuti pertempuran dan pertumbuhan mereka saat mereka belajar ilmu pedang dan sihir."
+        },
+        {
+            judul: "Rokudenashi Majutsu Koushi to Akashic Records",
+            keyword: "Rokudenashi Majutsu Koushi",
+            genre: ["Action", "Fantasy", "School"],
+            sinopsis: "Glenn Radars, seorang guru pengganti yang malas, secara tidak sengaja menjadi instruktur di akademi sihir. Meskipun tampak tidak kompeten, ia memiliki kemampuan tersembunyi dan pandangan unik tentang sihir."
+        },
+        {
+            judul: "Ryoushin no Shakkin wo Katagawari shite Morau Jouken wa Nihon'ichi Kawaii Joshikousei to Issho ni Kurasu Koto Deshita.",
+            keyword: "Ryoushin no Shakkin",
+            genre: ["Romance", "Comedy"],
+            sinopsis: "Untuk melunasi hutang orang tuanya, seorang pria harus tinggal bersama gadis SMA tercantik di Jepang. Kisah komedi romantis tentang hidup bersama dengan kondisi yang tidak biasa."
+        }
+    ],
+    "S": [
+        {
+            judul: "Saenai Heroine no Sodatekata",
+            keyword: "Saenai Heroine no",
+            genre: ["Comedy", "Romance", "Harem", "School"],
+            sinopsis: "Tomoya Aki, seorang otaku, berusaha membuat game kencan dengan menjadikan Megumi Kato, seorang gadis biasa yang tidak mencolok, sebagai inspirasi pahlawan wanitanya."
+        },
+        {
+            judul: "Saijaku Muhai No Bahamut",
+            keyword: "Saijaku Muhai No",
+            genre: ["Action", "Ecchi", "Fantasy", "Harem", "Mecha", "Romance", "School"],
+            sinopsis: "Lux Arcadia, mantan pangeran terkuat, secara tidak sengaja memasuki area khusus wanita dan berakhir di akademi wanita. Dia harus belajar dan bertarung dengan 'Drag-Ride' mekanis."
+        },
+        {
+            judul: "Saijaku Tamer wa Gomi Hiroi no Tabi o Hajimemashita.",
+            keyword: "Saijaku Tamer wa",
+            genre: ["Adventure", "Fantasy", "Slice of Life"],
+            sinopsis: "Seorang penjinak monster terlemah memulai perjalanan mengumpulkan sampah untuk bertahan hidup. Kisah petualangan fantasi yang mengharukan dari seorang karakter yang lemah namun gigih."
+        },
+        {
+            judul: "Saikyou Degarashi Ouji no An’yaku Teii Arasoi: Munou wo Enjiru SS Rank Ouji wa Koui Keishou-sen wo Kage kara Shihai suru",
+            keyword: "Saikyou Degarashi Ouji",
+            genre: ["Fantasy", "Political", "Action"],
+            sinopsis: "Seorang pangeran terkuat yang berpura-pura tidak kompeten secara diam-diam mengendalikan perebutan takhta. Kisah intrik politik, aksi, dan fantasi dari seorang pangeran yang licik."
+        },
+        {
+            judul: "Saikyou Mahoushi no Inton Keikaku",
+            keyword: "Saikyou Mahoushi no",
+            genre: ["Fantasy", "Action", "Adventure"],
+            sinopsis: "Seorang penyihir terkuat berencana untuk menjalani kehidupan yang tenang dan terpencil. Namun, bakat dan kekuatannya terus menariknya ke dalam masalah dan petualangan."
+        },
+        {
+            judul: "Saikyou no Shien-shoku [Wajutsushi] de Aru Ore wa Sekai Saikyou Clan wo Shitagaeru",
+            keyword: "Saikyou no Shien",
+            genre: ["Fantasy", "Action", "Adventure"],
+            sinopsis: "Seorang karakter pendukung terkuat, seorang 'Wajutsushi' (ahli strategi), memimpin klan terkuat di dunia. Kisah tentang strategi, kepemimpinan, dan petualangan fantasi."
+        },
+        {
+            judul: "Sakurasou no Pet na Kanojo",
+            keyword: "Sakurasou no Pet",
+            genre: ["Comedy", "Drama", "Romance", "Slice of Life"],
+            sinopsis: "Sorata Kanda dipindahkan ke asrama Sakurasou, tempat berkumpulnya siswa-siswa bermasalah. Dia harus merawat Mashiro Shiina, seorang gadis jenius dalam seni yang tidak bisa mengurus dirinya sendiri."
+        },
+        {
+            judul: "Second post",
+            keyword: "Second post",
+            genre: ["TBD"],
+            sinopsis: "Sepertinya 'Second post' kemungkinan adalah placeholder atau judul yang tidak lengkap. Konteks lebih lanjut diperlukan untuk menentukan genre dan sinopsis."
+        },
+        {
+            judul: "Seiken Gakuin no Maken Tsukai",
+            keyword: "Seiken Gakuin no",
+            genre: ["Action", "Fantasy", "Ecchi", "School"],
+            sinopsis: "Leon, seorang Raja Iblis yang bereinkarnasi, memasuki akademi pedang suci. Dia harus menyembunyikan identitasnya sambil berurusan dengan pertempuran dan gadis-gadis di sekitarnya."
+        },
+        {
+            judul: "Seirei Gensouki",
+            keyword: "Seirei Gensouki",
+            genre: ["Fantasy", "Isekai", "Drama", "Romance"],
+            sinopsis: "Rio adalah anak yatim piatu yang tinggal di daerah kumuh yang menyadari bahwa dia adalah reinkarnasi dari Haruto Amakawa. Dia memulai perjalanan untuk membalas dendam dan mencari identitasnya di dunia baru."
+        },
+        {
+            judul: "Seirei Tsukai no Blade Dance",
+            keyword: "Seirei Tsukai no",
+            genre: ["Action", "Ecchi", "Fantasy", "Harem", "School"],
+            sinopsis: "Kamito Kazehaya secara tidak sengaja mengintip ritual roh dan terpaksa menggantikan seorang gadis sebagai Spirit Blade User. Dia memasuki sekolah wanita untuk Spirit Blade User dan terlibat dalam turnamen."
+        },
+        {
+            judul: "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+            keyword: "Seishun Buta Yarou",
+            genre: ["Comedy", "Drama", "Romance", "Supernatural"],
+            sinopsis: "Sakuta Azusagawa bertemu dengan Mai Sakurajima, seorang gadis kelinci yang sebenarnya adalah seorang aktris terkenal yang menghilang dari pandangan publik karena sindrom pubertas. Dia membantu Mai dan gadis-gadis lain yang menderita sindrom yang sama."
+        },
+        {
+            judul: "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru",
+            keyword: "Sekai Saikou no",
+            genre: ["Action", "Fantasy", "Isekai", "Reincarnation"],
+            sinopsis: "Seorang pembunuh bayaran terhebat di dunia bereinkarnasi sebagai bangsawan di dunia lain. Dia menerima misi untuk membunuh pahlawan untuk mencegah kehancuran dunia."
+        },
+        {
+            judul: "Sentouin, Hakenshimasu!",
+            keyword: "Sentouin, Hakenshimasu!",
+            genre: ["Action", "Comedy", "Sci-Fi", "Ecchi", "Fantasy"],
+            sinopsis: "Combat Agent 6 dikirim ke dunia lain oleh Organisasi Kisaragi yang jahat. Dia harus menjelajahi dunia baru dan memastikan bahwa itu layak untuk ditaklukkan."
+        },
+        {
+            judul: "Sevens",
+            keyword: "Sevens",
+            genre: ["Fantasy", "School", "Harem", "Romance"],
+            sinopsis: "Menceritakan kisah seorang anak laki-laki dari keluarga bangsawan miskin yang memasuki akademi bangsawan. Dia berjuang untuk mempertahankan status bangsawan keluarganya dan menemukan cinta di akademi."
+        },
+        {
+            judul: "Shijou Saikyou no Daimaou, Murabito A ni Tensei suru",
+            keyword: "Shijou Saikyou no",
+            genre: ["Action", "Comedy", "Ecchi", "Fantasy", "Harem", "School"],
+            sinopsis: "Raja Iblis terkuat bereinkarnasi sebagai penduduk desa biasa bernama Ard Meteor. Meskipun ingin hidup normal, kekuatannya yang luar biasa membuatnya menonjol di akademi sihir."
+        },
+        {
+            judul: "Shijou Saikyou Orc-san no Tanoshii Tanetsuke Harem Zukuri",
+            keyword: "Shijou Saikyou Orc",
+            genre: ["Fantasy", "Harem", "Ecchi", "Comedy"],
+            sinopsis: "Seorang Orc terkuat memulai petualangan untuk membuat harem yang menyenangkan. Kisah fantasi komedi dengan elemen harem dan ecchi."
+        },
+        {
+            judul: "Shimotsuki-san wa Mob ga Suki",
+            keyword: "Shimotsuki-san wa Mob",
+            genre: ["Romance", "Comedy", "School"],
+            sinopsis: "Seorang gadis populer, Shimotsuki-san, menyukai karakter 'mob' (karakter latar belakang) seperti protagonis. Kisah komedi romantis yang tidak biasa di sekolah."
+        },
+        {
+            judul: "Shinigami ni Sodaterareta Shoujo wa Shikkoku no Ken wo Mune ni Idaku",
+            keyword: "Shinigami ni Sodaterareta",
+            genre: ["Action", "Fantasy", "Adventure"],
+            sinopsis: "Seorang gadis yang dibesarkan oleh Shinigami (Dewa Kematian) membawa pedang hitam di dadanya. Dia memulai perjalanan yang penuh aksi dan petualangan di dunia fantasi."
+        },
+        {
+            judul: "Shinmai Maou no Keiyakusha",
+            keyword: "Shinmai Maou no",
+            genre: ["Action", "Ecchi", "Fantasy", "Harem", "Romance", "Supernatural"],
+            sinopsis: "Toujou Basara secara tidak sengaja membuat kontrak dengan dua succubus yang ternyata adalah anak perempuan Raja Iblis baru. Dia harus melindungi mereka dari bahaya dan terlibat dalam pertempuran supernatural."
+        },
+        {
+            judul: "Shiranai Uchi ni Kachigumi Jinsei",
+            keyword: "Shiranai Uchi ni",
+            genre: ["Fantasy", "Isekai", "Slice of Life"],
+            sinopsis: "Seorang pria bereinkarnasi ke dunia lain dan tanpa menyadarinya menjalani 'kehidupan pemenang'. Kisah slice-of-life isekai tentang kehidupan yang lancar dan sukses tanpa disadari."
+        },
+        {
+            judul: "Silver Cross and Vampire",
+            keyword: "Silver Cross and",
+            genre: ["Fantasy", "Supernatural", "Romance", "Action"],
+            sinopsis: "Sebuah kisah yang kemungkinan melibatkan seorang protagonis yang berurusan dengan vampir, mungkin dengan menggunakan salib perak sebagai senjata. Elemen fantasi, supernatural, romantis, dan aksi mungkin hadir."
+        },
+        {
+            judul: "Solo Leveling",
+            keyword: "Solo Leveling",
+            genre: ["Action", "Fantasy", "Adventure"],
+            sinopsis: "Di dunia tempat 'Gates' menghubungkan dunia ini dengan dunia monster, Sung Jinwoo, seorang Hunter peringkat-E terlemah, mendapatkan kemampuan untuk 'level up' sendirian. Dia menjadi lebih kuat untuk melindungi orang lain dan mengungkap misteri di balik Gates."
+        },
+        {
+            judul: "Sono mono. Nochi ni...",
+            keyword: "Sono mono. Nochi",
+            genre: ["Fantasy", "Adventure", "Isekai"],
+            sinopsis: "Seorang pria bereinkarnasi ke dunia lain sebagai monster terlemah, goblin. Dia berjuang untuk bertahan hidup dan berevolusi menjadi eksistensi yang lebih kuat di dunia yang keras."
+        },
+        {
+            judul: "Spy Kyoushitsu",
+            keyword: "Spy Kyoushitsu",
+            genre: ["Comedy", "School", "Spy"],
+            sinopsis: "Klaus, mata-mata terbaik, membentuk tim dengan tujuh mata-mata wanita yang tidak kompeten. Dia harus melatih mereka untuk misi yang hampir mustahil."
+        },
+        {
+            judul: "Strike the Blood",
+            keyword: "Strike the Blood",
+            genre: ["Action", "Ecchi", "Fantasy", "School", "Supernatural", "Vampire"],
+            sinopsis: "Kojou Akatsuki, seorang siswa SMA biasa, menjadi vampir terkuat, 'Fourth Progenitor.' Dia harus berurusan dengan kekuatan barunya dan berbagai ancaman supernatural, dibantu oleh pengawasnya, Yukina Himeragi."
+        },
+        {
+            judul: "Sword Art Online",
+            keyword: "Sword Art Online",
+            genre: ["Action", "Adventure", "Fantasy", "Game", "Romance", "Sci-Fi"],
+            sinopsis: "Kazuto 'Kirito' Kirigaya terjebak dalam VRMMORPG 'Sword Art Online.' Jika dia mati dalam game, dia juga akan mati di dunia nyata. Dia harus bekerja sama dengan pemain lain untuk membersihkan 100 lantai Aincrad dan melarikan diri."
+        }
+    ],
+    "T": [
+        {
+            judul: "Taking My Reincarnation One Step at a Time: No One Told Me There Would Be Monsters Here!",
+            keyword: "Taking My Reincarnation One",
+            genre: ["Fantasy", "Isekai", "Adventure"],
+            sinopsis: "Seorang pria bereinkarnasi ke dunia lain, tetapi tidak ada yang memberitahunya bahwa dunia itu penuh dengan monster. Dia harus beradaptasi dan bertahan hidup di dunia isekai yang berbahaya."
+        },
+        {
+            judul: "Tantei wa mou Shindeiru",
+            keyword: "Tantei wa mou",
+            genre: ["Comedy", "Drama", "Mystery", "Romance", "Supernatural"],
+            sinopsis: "Kimihiko Kimizuka, mantan asisten detektif, menjalani kehidupan normal setelah kematian detektifnya, Siesta. Namun, dia tidak bisa sepenuhnya lepas dari masa lalunya sebagai detektif."
+        },
+        {
+            judul: "Tate no Yuusha no Nariagari",
+            keyword: "Tate no Yuusha no",
+            genre: ["Action", "Adventure", "Fantasy", "Isekai", "Drama"],
+            sinopsis: "Naofumi Iwatani dipanggil ke dunia lain sebagai 'Pahlawan Perisai.' Dikhianati dan difitnah, dia harus berjuang untuk mendapatkan kembali kepercayaannya dan menjadi pahlawan sejati."
+        },
+        {
+            judul: "Tearmoon Teikoku Monogatari ~Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story~",
+            keyword: "Tearmoon Teikoku Monogatari",
+            genre: ["Fantasy", "Comedy", "Reincarnation"],
+            sinopsis: "Mia Luna Tearmoon, seorang putri yang dieksekusi, bereinkarnasi kembali ke masa kecilnya. Dia menggunakan ingatan masa depannya untuk menghindari eksekusi dan mengubah takdir kerajaannya."
+        },
+        {
+            judul: "Tensai Ouji no Akaji Kokka Saisei Jutsu (Sou da, Baikoku Shiyou)",
+            keyword: "Tensai Ouji no",
+            genre: ["Fantasy", "Comedy", "Political"],
+            sinopsis: "Pangeran Wein Salema Arbalest, seorang pangeran jenius, berusaha untuk menjual kerajaannya yang lemah demi keuntungan pribadi. Namun, kecerdasannya justru membuatnya semakin sukses dan tidak bisa menjual kerajaannya."
+        },
+        {
+            judul: "Tensei Kizoku no Isekai Boukenroku ~Jichou wo Shiranai Kamigami no Shito~",
+            keyword: "Tensei Kizoku no",
+            genre: ["Fantasy", "Isekai", "Adventure"],
+            sinopsis: "Kain von Silford bereinkarnasi ke dunia lain sebagai bangsawan. Dia terlalu kuat karena berkat dewa, tetapi dia tidak menyadari kekuatannya yang luar biasa dan menjalani petualangan di dunia baru."
+        },
+        {
+            judul: "Tensei Oujo to Tensai Reijou no Mahou Kakumei",
+            keyword: "Tensei Oujo to",
+            genre: ["Fantasy", "Yuri", "Reincarnation"],
+            sinopsis: "Seorang putri bereinkarnasi dengan ingatan kehidupan sebelumnya dan terobsesi dengan sihir. Dia bertemu dengan seorang wanita bangsawan jenius dan bersama-sama mereka merevolusi dunia sihir."
+        },
+        {
+            judul: "Tensei shitara Slime Datta Ken",
+            keyword: "Tensei shitara Slime",
+            genre: ["Fantasy", "Isekai", "Adventure", "Comedy"],
+            sinopsis: "Satoru Mikami, seorang pria biasa, bereinkarnasi ke dunia lain sebagai slime. Meskipun lemah pada awalnya, dia mendapatkan kemampuan unik dan membangun negara monster yang makmur."
+        },
+        {
+            judul: "The Demon Prince Goes to the Academy",
+            keyword: "The Demon Prince",
+            genre: ["Fantasy", "School", "Action"],
+            sinopsis: "Seorang pangeran iblis memasuki akademi manusia. Dia harus menyembunyikan identitasnya sambil belajar dan bertarung di lingkungan manusia."
+        },
+        {
+            judul: "The New Gate",
+            keyword: "The New Gate",
+            genre: ["Action", "Adventure", "Fantasy", "Game"],
+            sinopsis: "Shin, seorang pemain veteran VRMMORPG 'THE NEW GATE,' terjebak dalam game setelah mengalahkan bos terakhir. Dia menemukan dirinya di dunia game 500 tahun kemudian dan memulai petualangan baru."
+        },
+        {
+            judul: "The Unexplored Summon Blood-Sign",
+            keyword: "The Unexplored Summon",
+            genre: ["Fantasy", "Action", "Dark Fantasy"],
+            sinopsis: "Sebuah kisah fantasi gelap yang kemungkinan melibatkan pemanggilan makhluk dan pertarungan di dunia yang belum dijelajahi, dengan elemen misteri dan kegelapan."
+        },
+        {
+            judul: "The World Otome Games/Trapped in a Dating Sim: The World of Otome Games is Tough for Mobs",
+            keyword: "The World Otome",
+            genre: ["Fantasy", "Isekai", "Comedy", "Romance"],
+            sinopsis: "Seorang pria bereinkarnasi ke dunia game otome sebagai karakter 'mob' (karakter latar belakang). Dia harus bertahan hidup di dunia game yang penuh dengan karakter utama yang merepotkan."
+        },
+        {
+            judul: "Third post",
+            keyword: "Third post",
+            genre: ["TBD"],
+            sinopsis: "Sepertinya 'Third post' kemungkinan adalah placeholder atau judul yang tidak lengkap. Konteks lebih lanjut diperlukan untuk menentukan genre dan sinopsis."
+        },
+        {
+            judul: "Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san",
+            keyword: "Tokidoki Bosotto Russia",
+            genre: ["Romance", "Comedy", "School"],
+            sinopsis: "Seorang gadis tetangga, Alya-san, yang duduk di sebelah protagonis, terkadang mengungkapkan perasaannya dalam bahasa Rusia tanpa menyadarinya. Kisah komedi romantis di sekolah."
+        },
+        {
+            judul: "Tomodachi no Imouto ga Ore ni Dake Uzai",
+            keyword: "Tomodachi no Imouto",
+            genre: ["Comedy", "Romance"],
+            sinopsis: "Adik perempuan teman protagonis hanya bersikap menyebalkan padanya. Kisah komedi romantis yang berpusat pada hubungan yang unik dan menjengkelkan ini."
+        },
+        {
+            judul: "Torture Princess: Fremd Torturchen",
+            keyword: "Torture Princess Fremd",
+            genre: ["Fantasy", "Dark Fantasy", "Action", "Adventure"],
+            sinopsis: "Elisabeth Le Fanu, 'Putri Penyiksaan,' menggunakan metode penyiksaan untuk melawan musuh-musuhnya. Kisah fantasi gelap yang penuh aksi dan petualangan dengan tema penyiksaan."
+        },
+        {
+            judul: "Tsuki ga Michibiku Isekai Douchuu",
+            keyword: "Tsuki ga Michibiku Isekai",
+            genre: ["Action", "Adventure", "Comedy", "Fantasy", "Isekai"],
+            sinopsis: "Makoto Misumi dipanggil ke dunia lain sebagai pahlawan, tetapi dewi dunia itu menganggapnya jelek dan membuangnya ke ujung dunia. Dia bertahan hidup dan menjadi lebih kuat dengan bantuan kekuatan dari bulan."
+        }
+    ],
+    "U": [
+        {
+            judul: "Uchi no Musume no Tame Naraba, Ore wa Moshikashitara Maou mo Taoseru Kamoshirenai.",
+            keyword: "Uchi no Musume no",
+            genre: ["Fantasy", "Slice of Life"],
+            sinopsis: "Seorang petualang yang kuat, Dale, mengambil seorang gadis iblis muda, Latina, sebagai putrinya. Kisah fantasi slice-of-life yang mengharukan tentang ikatan ayah dan anak."
+        },
+        {
+            judul: "Ultimate Antihero",
+            keyword: "Ultimate Antihero",
+            genre: ["Action", "Fantasy", "Supernatural"],
+            sinopsis: "Sebuah kisah tentang seorang antihero terhebat, kemungkinan besar dengan kekuatan luar biasa dan pendekatan yang tidak konvensional dalam menghadapi kejahatan dan keadilan."
+        },
+        {
+            judul: "Unnamed Memory",
+            keyword: "Unnamed Memory",
+            genre: ["Fantasy", "Romance"],
+            sinopsis: "Pangeran Oscar mencari menara penyihir untuk mematahkan kutukan yang akan mencegahnya memiliki ahli waris. Dia bertemu dengan penyihir Lanak dan meminta bantuannya, yang mengarah ke hubungan yang kompleks."
+        },
+        {
+            judul: "Urasekai Picnic",
+            keyword: "Urasekai Picnic",
+            genre: ["Sci-Fi", "Mystery", "Supernatural", "Yuri"],
+            sinopsis: "Sorawo Kamikoshi dan Toriko Nishina menjelajahi 'Ura Sekai,' dunia lain yang berbahaya dan misterius yang berdampingan dengan dunia kita. Kisah petualangan supernatural dengan elemen yuri."
+        },
+        {
+            judul: "Using MDX",
+            keyword: "Using MDX",
+            genre: ["Informational"],
+            sinopsis: "Sepertinya 'Using MDX' kemungkinan adalah judul dokumentasi atau panduan. Konteks lebih lanjut diperlukan untuk menentukan sinopsis spesifik."
+        },
+        {
+            judul: "Utsuro no Hako to Zero no Maria",
+            keyword: "Utsuro no Hako",
+            genre: ["Mystery", "Psychological", "Supernatural", "Thriller", "School"],
+            sinopsis: "Kazuki Hoshino dan teman-teman sekelasnya terjebak dalam siklus waktu yang berulang. Mereka harus mengungkap misteri 'Kotak Kosong' dan 'Maria Nol' untuk memecahkan lingkaran ini."
+        }
+    ],
+    "V": [
+        {
+            judul: "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+            keyword: "Villainess Level 99",
+            genre: ["Fantasy", "Comedy", "Isekai"],
+            sinopsis: "Yumiella Dolkness bereinkarnasi sebagai penjahat wanita dalam game otome. Dia secara tidak sengaja menjadi terlalu kuat saat berusaha untuk tidak menjadi bos tersembunyi, menyebabkan kesalahpahaman dan kekacauan."
+        }
+    ],
+    "W": [
+        {
+            judul: "Watashi ga Koibito ni Nareru Wakenaijan, Muri Muri! (※Muri Janakatta!?)",
+            keyword: "Watashi ga Koibito",
+            genre: ["Comedy", "Romance", "School"],
+            sinopsis: "Alicia Magnolia yakin bahwa dia tidak mungkin menjadi pacar. Namun, situasinya berubah dan dia mungkin saja salah. Kisah komedi romantis di sekolah dengan kejutan tak terduga."
+        },
+        {
+            judul: "Watashi, Nouryoku wa Heikinchi de tte Itta yo ne!",
+            keyword: "Watashi, Nouryoku wa",
+            genre: ["Adventure", "Comedy", "Fantasy", "Isekai"],
+            sinopsis: "Misato Kurihara bereinkarnasi ke dunia lain dan berharap memiliki kemampuan rata-rata. Namun, karena kesalahpahaman, dia menjadi terlalu kuat. Kisah komedi fantasi tentang seorang gadis yang terlalu kuat meskipun ingin menjadi rata-rata."
+        }
+    ],
+    "Y": [
+        {
+            judul: "Yasei no Last Boss ga Arawareta!",
+            keyword: "Yasei no Last",
+            genre: ["Comedy", "Fantasy", "Isekai", "Romance"],
+            sinopsis: "Seorang pemain VRMMORPG bereinkarnasi sebagai bos terakhir terkuat dalam game, Rubilia. Dia harus beradaptasi dengan kehidupan barunya di dunia game dan berinteraksi dengan karakter lain."
+        },
+        {
+            judul: "Yobidasareta Satsurikusha",
+            keyword: "Yobidasareta Satsurikusha",
+            genre: ["Action", "Fantasy", "Isekai", "Dark Fantasy"],
+            sinopsis: "Seorang pembunuh dipanggil ke dunia lain. Kisah fantasi gelap yang penuh aksi tentang seorang pembunuh di dunia isekai."
+        },
+        {
+            judul: "Yondome wa Iyana Shi Zokusei Majutsushi",
+            keyword: "Yondome wa Iyana",
+            genre: ["Action", "Fantasy", "Isekai"],
+            sinopsis: "Seorang penyihir dengan atribut kematian menjalani kehidupan keempatnya di dunia lain. Kisah aksi fantasi isekai dengan protagonis yang unik dan kuat."
+        },
+        {
+            judul: "Youjo Senki",
+            keyword: "Youjo Senki",
+            genre: ["Military", "Fantasy", "Isekai", "Action"],
+            sinopsis: "Seorang pria bereinkarnasi sebagai gadis kecil di dunia yang mirip Eropa selama perang dunia. Dia bergabung dengan militer dan menjadi penyihir tempur yang kejam untuk bertahan hidup."
+        },
+        {
+            judul: "Your and My Asylum",
+            keyword: "Your and My",
+            genre: ["Drama", "Romance", "Supernatural"],
+            sinopsis: "Sebuah kisah drama romantis supernatural yang kemungkinan berpusat pada hubungan antara dua karakter dan 'suaka' mereka, mungkin dalam konteks emosional atau dunia lain."
+        },
+        {
+            judul: "Yujin Kyara wa Taihen desu ka?",
+            keyword: "Yujin Kyara wa",
+            genre: ["Comedy", "Slice of Life", "School"],
+            sinopsis: "Kisah komedi slice-of-life di sekolah tentang kehidupan karakter 'teman' (yujin kyara), kemungkinan berfokus pada karakter pendukung yang menjalani kehidupan sehari-hari yang lucu."
+        },
+        {
+            judul: "Yumemiru Danshi wa Genjitsushugisha",
+            keyword: "Yumemiru Danshi wa",
+            genre: ["Romance", "Comedy"],
+            sinopsis: "Seorang anak laki-laki yang dulunya seorang pemimpi tiba-tiba menjadi seorang realis. Kisah komedi romantis yang berpusat pada perubahan perspektif protagonis dalam cinta dan kehidupan."
+        },
+        {
+            judul: "yuusha ni horobosareru dake no kantan na oshigoto desu",
+            keyword: "yuusha ni horobosareru",
+            genre: ["Comedy", "Fantasy", "Dark Comedy"],
+            sinopsis: "Sebuah pekerjaan sederhana yang hanya perlu dikalahkan oleh pahlawan. Kisah komedi gelap fantasi yang kemungkinan satir atau subversif terhadap trope pahlawan dan raja iblis."
+        }
     ]
 };
-
 
 // Fungsi untuk membuat daftar genre unik dan terurut dari daftar novel
 function getUniqueGenres() {
