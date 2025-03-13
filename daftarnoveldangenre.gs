@@ -79,7 +79,7 @@ function getNovelListGenreKeyboard(genre) {
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
             if (novel.genre.includes(genre)) {
-                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+                tombolNovel.push([{ text: novel.judul, callback_data: `genre_${genre}_novel_page_${novel.judul}` }]); // Simpan konteks genre
             }
         });
     }
@@ -135,40 +135,9 @@ function getMenuNovelKeyboard() {
 
 function getNovelListKeyboard(huruf) {
     let novels = daftarNovel[huruf] || [];
-    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: `alfabet_${huruf}_novel_page_${novel.judul}` }]); // Simpan konteks alfabet
     tombolNovel.push([{ text: "Kembali ke Menu Novel 🤡", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
     return { inline_keyboard: tombolNovel };
-}
-
-function getNovelPageKeyboard(judulNovel) {
-    let novel = null;
-    for (const huruf in daftarNovel) {
-        novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
-        if (novel) break;
-    }
-
-    if (!novel) {
-        return getMenuNovelKeyboard();
-    }
-
-    let genrePertama = novel.genre.split(', ')[0].trim();
-    let tombolKembali = [
-        { 
-            text: "Kembali ke Daftar " + judulNovel.charAt(0).toUpperCase(), 
-            callback_data: "novel_list_" + judulNovel.charAt(0).toUpperCase() 
-        }, 
-        { 
-            text: "Kembali ke Genre " + genrePertama + " 🎭", 
-            callback_data: "genre_list_" + genrePertama 
-        }
-    ];
-
-    let keyboard = {
-        inline_keyboard: [
-            [{ text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword }],
-            tombolKembali]
-    };
-    return keyboard;
 }
 
 function showNovelMenu(chatId, messageId) {
@@ -181,13 +150,17 @@ function showNovelListPage(chatId, messageId, huruf) {
     if (listNovelKeyboard.inline_keyboard.length <= 1) { // Hanya tombol kembali, berarti tidak ada novel di huruf ini
         let menuText = `<b>📚 Daftar Novel - Abjad ${huruf.toUpperCase()} Kosong 👻</b>\n\n<i>Tidak ada arwah novel yang bersembunyi di abjad ini... Kembali ke menu utama novel.</i>`;
         editMessageText(chatId, messageId, menuText, JSON.stringify({ inline_keyboard: [[{ text: "Kembali ke Menu Novel", callback_data: "daftar_novel" }]] }));
-    } else {
-        let menuText = `<b>📚 Daftar Novel - Abjad ${huruf.toUpperCase()} 🖤</b>\n\n<i>Pilih novel yang memanggil jiwamu dari daftar berikut...</i>`;
+    } else { let menuText = `<b>📚 Daftar Novel - Abjad ${huruf.toUpperCase()} 🖤</b>\n\n<i>Pilih novel yang memanggil jiwamu dari daftar berikut...</i>`;
         editMessageText(chatId, messageId, menuText, JSON.stringify(listNovelKeyboard));
     }
 }
 
-function showNovelPage(chatId, messageId, judulNovel) {
+function showNovelPage(chatId, messageId, callback_data) { // Menerima callback_data
+    let parts = callback_data.split('_');
+    let context = parts[0];
+    let hurufAtauGenre = parts[1];
+    let judulNovel = parts.slice(3).join('_'); // Ambil judul novel dari callback_data
+
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -195,10 +168,27 @@ function showNovelPage(chatId, messageId, judulNovel) {
     }
 
     if (!novel) {
-        kirimPesan(chatId, "Novel tidak ditemukan dalam arsip kegelapan... 😈"); // Error handling jika novel tidak ditemukan
+        kirimPesan(chatId, "Novel tidak ditemukan dalam arsip kegelapan... 😈");
         return;
     }
 
+    let kembaliCallback;
+    let kembaliText;
+    if (context === "alfabet") {
+        kembaliCallback = "novel_list_" + hurufAtauGenre;
+        kembaliText = "Kembali ke Daftar " + hurufAtauGenre.toUpperCase();
+    } else if (context === "genre") {
+        kembaliCallback = "genre_list_" + hurufAtauGenre;
+        kembaliText = "Kembali ke Genre " + hurufAtauGenre;
+    }
+
+    let keyboard = {
+        inline_keyboard: [
+            [{ text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword }],
+            [{ text: kembaliText, callback_data: kembaliCallback }]
+        ]
+    };
+
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
-    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
+    editMessageText(chatId, messageId, novelText, JSON.stringify(keyboard));
 }
