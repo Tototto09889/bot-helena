@@ -7,20 +7,12 @@ const daftarNovel = {
             sinopsis: "Kamar tidurku terhubung ke dunia lain!? Tiba-tiba rumah kontrakan NEET berusia 30 tahun itu berpindah ke dunia lain."
         }
     ],
-     "A": [
+    "K": [
         {
-            judul: "Arifureta: From Commonplace to World's Strongest",
-            keyword: "arifureta",
-            genre: "Isekai, Action, Fantasy",
-            sinopsis: "Hajime Nagumo, seorang otaku biasa, mendapati dirinya dan teman-teman sekelasnya dipanggil ke dunia lain."
-        }
-    ],
-    "R": [
-        {
-            judul: "Re:Zero − Starting Life in Another World",
-            keyword: "rezero",
-            genre: "Isekai, Psychological, Thriller",
-            sinopsis: "Subaru Natsuki tiba-tiba dipanggil ke dunia lain dalam perjalanan pulang dari toko serba ada."
+            judul: "KonoSuba: God's Blessing on This Wonderful World!",
+            keyword: "konosuba",
+            genre: "Isekai, Comedy, Fantasy",
+            sinopsis: "Kazuma Satou, seorang NEET penyendiri, mati dengan cara yang menyedihkan saat perjalanan pulang dari membeli game. Dia kemudian bereinkarnasi ke dunia fantasi, tetapi keadaannya tidak seindah yang dia bayangkan."
         }
     ]
 };
@@ -64,7 +56,7 @@ function getNovelListGenreKeyboard(genre) {
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
             if (novel.genre.includes(genre)) {
-                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_genre_" + genre + "_" + novel.judul }]); // MODIFIED: Add genre context to callback_data
+                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
             }
         });
     }
@@ -119,16 +111,14 @@ function getMenuNovelKeyboard() {
     return keyboard;
 }
 
-// MODIFIED: Add contextType and contextValue parameters
 function getNovelListKeyboard(huruf) {
     let novels = daftarNovel[huruf] || [];
-    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_abjad_" + huruf + "_" + novel.judul }]); // MODIFIED: Add abjad context to callback_data
+    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
     tombolNovel.push([{ text: "Kembali ke Menu Novel 🤡", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
     return { inline_keyboard: tombolNovel };
 }
 
-// MODIFIED: Add contextType and contextValue parameters
-function getNovelPageKeyboard(judulNovel, contextType, contextValue) {
+function getNovelPageKeyboard(judulNovel) {
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -139,28 +129,13 @@ function getNovelPageKeyboard(judulNovel, contextType, contextValue) {
         return getMenuNovelKeyboard(); // Kembali ke menu novel jika novel tidak ditemukan (error handling)
     }
 
-    let backCallbackData = "";
-    let backText = "";
-
-    if (contextType === "genre") {
-        backCallbackData = "genre_list_" + contextValue;
-        backText = "Kembali ke Daftar Genre " + contextValue;
-    } else if (contextType === "abjad") {
-        backCallbackData = "novel_list_" + contextValue;
-        backText = "Kembali ke Daftar Menu " + contextValue.toUpperCase();
-    } else {
-        backCallbackData = "daftar_novel"; // Default kembali ke menu novel jika tidak ada context
-        backText = "Kembali ke Daftar Novel";
-    }
-
-
     let keyboard = {
         inline_keyboard: [
             [
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword } // Inline query dengan keyword novel
             ],
             [
-                { text: backText, callback_data: backCallbackData } // MODIFIED: Dynamic back button
+                { text: "Kembali ke Daftar Menu " + judulNovel.charAt(0).toUpperCase(), callback_data: "novel_list_" + judulNovel.charAt(0).toUpperCase() } // Kembali ke menu novel per huruf
             ]
         ]
     };
@@ -185,8 +160,7 @@ function showNovelListPage(chatId, messageId, huruf) {
 }
 
 
-// MODIFIED: Add contextType and contextValue parameters
-function showNovelPage(chatId, messageId, judulNovel, contextType, contextValue) {
+function showNovelPage(chatId, messageId, judulNovel) {
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -199,5 +173,5 @@ function showNovelPage(chatId, messageId, judulNovel, contextType, contextValue)
     }
 
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
-    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel, contextType, contextValue))); // MODIFIED: Pass context to getNovelPageKeyboard
+    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
