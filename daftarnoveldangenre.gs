@@ -1137,7 +1137,7 @@ function getUniqueGenres() {
 // Fungsi untuk membuat keyboard menu genre dengan pagination
 function getMenuGenreKeyboard(page = 1) {
     let genres = getUniqueGenres();
-    const genresPerPage = 10;
+    const genresPerPage = 15;
     const start = (page - 1) * genresPerPage;
     const end = start + genresPerPage;
     const paginatedGenres = genres.slice(start, end);
