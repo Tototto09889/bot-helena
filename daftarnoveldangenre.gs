@@ -335,10 +335,9 @@ const daftarNovel = {
     ]
 };
 
-// Fungsi untuk membersihkan judul novel (sama seperti sebelumnya)
 function cleanUpNovelTitles() {
-    const specialCharsRegex = /[~!@#$%^&*()_+{}\[\]:;"'<>,.?/\\|`-]/g; // Regex untuk karakter khusus yang ingin dihapus
-    const maxLength = 30; // Panjang maksimum judul novel
+    const specialCharsRegex = /[~!@#$%^&*()_+{}\[\]:;"'<>,.?/\\|`-]/g;
+    const maxLength = 30;
 
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
@@ -352,7 +351,6 @@ function cleanUpNovelTitles() {
 
 cleanUpNovelTitles();
 
-// Fungsi untuk membuat daftar genre unik dan terurut dari daftar novel (sama seperti sebelumnya)
 function getUniqueGenres() {
     let genres = new Set();
     for (const huruf in daftarNovel) {
@@ -363,8 +361,7 @@ function getUniqueGenres() {
     return Array.from(genres).sort();
 }
 
-// Fungsi untuk membuat keyboard menu genre dengan pagination
-function getMenuGenreKeyboard(page = 1, genresPerPage = 7) { // Default 7 genre per halaman + 1 tombol kembali
+function getMenuGenreKeyboard(page = 1, genresPerPage = 7) {
     let genres = getUniqueGenres();
     let keyboard = {
         inline_keyboard: []
@@ -400,7 +397,6 @@ function getMenuGenreKeyboard(page = 1, genresPerPage = 7) { // Default 7 genre 
     return keyboard;
 }
 
-// Fungsi untuk membuat keyboard daftar novel per genre (sama seperti sebelumnya)
 function getNovelListGenreKeyboard(genre) {
     let tombolNovel = [];
     for (const huruf in daftarNovel) {
@@ -415,8 +411,7 @@ function getNovelListGenreKeyboard(genre) {
 }
 
 
-// Fungsi untuk membuat keyboard menu novel dengan pagination
-function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) { // Default 7 huruf per halaman + 1 tombol kembali
+function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) {
     let hurufArr = Object.keys(daftarNovel);
     let keyboard = {
         inline_keyboard: []
@@ -428,7 +423,7 @@ function getMenuNovelKeyboard(page = 1, novelsPerPage = 7) { // Default 7 huruf 
 
     displayedHuruf.forEach(huruf => {
         row.push({ text: huruf, callback_data: "novel_list_" + huruf });
-        if (row.length === 7) { // Maksimal 7 tombol per baris (untuk abjad)
+        if (row.length === 7) {
             keyboard.inline_keyboard.push(row);
             row = [];
         }
@@ -490,18 +485,18 @@ function getNovelPageKeyboard(judulNovel) {
 }
 
 
-let genreMenuPage = 1; // Halaman saat ini untuk menu genre
-let novelMenuPage = 1; // Halaman saat ini untuk menu novel
+let genreMenuPage = 1;
+let novelMenuPage = 1;
 
 function showGenreMenu(chatId, messageId, page = 1) {
-    genreMenuPage = page; // Update halaman saat ini
+    genreMenuPage = page;
     let menuText = "<b>🎭 Daftar Genre Novel - Pilih Genre Kegelapan...</b>\n\n<i>Telusuri genre untuk menemukan kisah yang sesuai seleramu... 🖤</i>";
     editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuGenreKeyboard(page)));
 }
 
 
 function showNovelMenu(chatId, messageId, page = 1) {
-    novelMenuPage = page; // Update halaman saat ini
+    novelMenuPage = page;
     let menuText = "<b>📚 Daftar Novel - Pilih Abjad Kegelapan...</b>\n\n<i>Gulir abjad untuk menemukan kisah yang jiwamu cari... 🖤</i>";
     editMessageText(chatId, messageId, menuText, JSON.stringify(getMenuNovelKeyboard(page)));
 }
@@ -534,14 +529,13 @@ function showNovelPage(chatId, messageId, judulNovel) {
     editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
 
-// Fungsi untuk handle callback data (perlu disesuaikan dengan bot Anda)
 function handleCallbackQuery(callbackQuery) {
     const chatId = callbackQuery.message.chat.id;
     const messageId = callbackQuery.message.message_id;
     const data = callbackQuery.data;
 
     if (data === "daftar_genre") {
-        showGenreMenu(chatId, messageId, 1); // Tampilkan menu genre halaman 1
+        showGenreMenu(chatId, messageId, 1);
     } else if (data.startsWith("daftar_genre_next_")) {
         const page = parseInt(data.split("_")[3]);
         showGenreMenu(chatId, messageId, page);
@@ -549,7 +543,7 @@ function handleCallbackQuery(callbackQuery) {
         const page = parseInt(data.split("_")[3]);
         showGenreMenu(chatId, messageId, page);
     } else if (data === "daftar_novel") {
-        showNovelMenu(chatId, messageId, 1); // Tampilkan menu novel halaman 1
+        showNovelMenu(chatId, messageId, 1);
     } else if (data.startsWith("daftar_novel_next_")) {
         const page = parseInt(data.split("_")[3]);
         showNovelMenu(chatId, messageId, page);
@@ -564,56 +558,20 @@ function handleCallbackQuery(callbackQuery) {
         const judulNovel = data.split("novel_page_")[1];
         showNovelPage(chatId, messageId, judulNovel);
     } else if (data === "kembali_ke_fitur") {
-        // Fungsi untuk kembali ke menu fitur utama (perlu disesuaikan dengan bot Anda)
-        // Contoh: showMainMenu(chatId, messageId);
         kirimPesan(chatId, "Kembali ke menu fitur (belum diimplementasikan dalam contoh ini).");
     } else if (data.startsWith("genre_list_")) {
         const genre = data.split("genre_list_")[1];
-        // Fungsi untuk menampilkan daftar novel berdasarkan genre (jika diperlukan)
-        // Contoh: showNovelListGenre(chatId, messageId, genre);
         kirimPesan(chatId, `Daftar novel genre ${genre} (belum diimplementasikan dalam contoh ini).`);
     }
-    // ... tambahkan case lain sesuai kebutuhan callback data lainnya ...
 }
 
 
-// Fungsi editMessageText dan kirimPesan (perlu disesuaikan dengan bot Anda, contoh implementasi)
 function editMessageText(chatId, messageId, text, keyboardMarkup) {
-    // Implementasikan fungsi editMessageText sesuai dengan platform bot Anda
-    // Contoh (untuk platform yang mendukung):
+    // Implementasikan fungsi editMessageText sesuai platform bot Anda
     Logger.log(`Edit message to chat ${chatId}, messageId ${messageId}: ${text} with keyboard ${keyboardMarkup}`);
-    // Telegram Bot API example:
-    /*
-    UrlFetchApp.fetch(`https://api.telegram.org/botYOUR_BOT_TOKEN/editMessageText`, {
-      'method': 'post',
-      'payload': {
-        'chat_id': chatId,
-        'message_id': messageId,
-        'text': text,
-        'parse_mode': 'HTML',
-        'reply_markup': keyboardMarkup
-      }
-    });
-    */
 }
 
 function kirimPesan(chatId, text) {
-    // Implementasikan fungsi kirimPesan sesuai dengan platform bot Anda
-    // Contoh (untuk platform yang mendukung):
+    // Implementasikan fungsi kirimPesan sesuai platform bot Anda
     Logger.log(`Send message to chat ${chatId}: ${text}`);
-     // Telegram Bot API example:
-    /*
-    UrlFetchApp.fetch(`https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage`, {
-      'method': 'post',
-      'payload': {
-        'chat_id': chatId,
-        'text': text,
-        'parse_mode': 'HTML'
-      }
-    });
-    */
 }
-
-
-// Contoh pemanggilan fungsi untuk menampilkan menu novel pertama kali
-// showNovelMenu(CHAT_ID, MESSAGE_ID);
