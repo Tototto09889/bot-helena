@@ -1284,7 +1284,7 @@ function getNovelListKeyboard(huruf, page = 1) {
     return { inline_keyboard: tombolNovel };
 }
 
-function getNovelPageKeyboard(judulNovel, menuSebelumnya) { // MODIFIED: Menerima parameter menuSebelumnya
+function getNovelPageKeyboard(judulNovel) {
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1301,7 +1301,10 @@ function getNovelPageKeyboard(judulNovel, menuSebelumnya) { // MODIFIED: Menerim
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword }
             ],
             [
-                { text: "Kembali", callback_data: menuSebelumnya } // MODIFIED: Tombol Kembali tunggal dan dinamis
+                { text: "Kembali ke Daftar Novel 📚", callback_data: "daftar_novel" }
+            ],
+             [
+                { text: "Kembali ke Menu Daftar Genre 🎭", callback_data: "daftar_genre" }
             ]
         ]
     };
@@ -1345,7 +1348,7 @@ function showNovelListGenrePage(chatId, messageId, genre, page = 1) {
 }
 
 
-function showNovelPage(chatId, messageId, judulNovel, menuSebelumnya) { // MODIFIED: Menerima parameter menuSebelumnya
+function showNovelPage(chatId, messageId, judulNovel) {
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1358,13 +1361,13 @@ function showNovelPage(chatId, messageId, judulNovel, menuSebelumnya) { // MODIF
     }
 
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
-    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel, menuSebelumnya))); // MODIFIED: Meneruskan menuSebelumnya
+    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
 }
 
 
 function cleanUpNovelTitles() {
     const specialCharsRegex = /[~!@#$%^&*()_+{}\[\]:;"'<>,.?/\\|`-]/g;
-    const maxLength = 50;
+    const maxLength = 30;
 
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
