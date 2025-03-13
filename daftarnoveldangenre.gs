@@ -298,6 +298,12 @@ const daftarNovel = {
             keyword: "slime",
             genre: "Fantasy, Isekai, Adventure, Comedy",
             sinopsis: "Satoru Mikami, seorang karyawan kantor berusia 37 tahun yang tidak memiliki pacar, terbunuh oleh perampok jalanan. Dia bereinkarnasi ke dunia lain sebagai slime. Meskipun menjadi slime lemah, dia mendapatkan kemampuan unik 'Predator' dan 'Great Sage' yang membuatnya menjadi semakin kuat. Rimuru Tempest, nama barunya sebagai slime, memulai petualangan untuk membangun negara yang damai di dunia monster."
+        },
+         {
+            judul: "The Irregular at Magic High School ~Mahouka Koukou no Rettousei~",
+            keyword: "mahouka koukou no rettousei",
+            genre: "Sci-Fi, Magic, School, Supernatural, Romance",
+            sinopsis: "Di abad ke-21, sihir telah menjadi teknologi. Tatsuya Shiba dan Miyuki Shiba adalah saudara kandung yang masuk ke SMA Sihir. Tatsuya dianggap 'inferior' karena kemampuan sihirnya yang rendah, sementara Miyuki adalah siswa berprestasi. Namun, Tatsuya memiliki kemampuan tersembunyi yang luar biasa."
         }
     ],
     "U": [
@@ -324,7 +330,7 @@ const daftarNovel = {
     ],
     "Y": [
         {
-            judul: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite)", // Duplikat judul, tapi sengaja untuk contoh
+            judul: "Youkoso Jitsuryokushijou Shugi no Kyoushitsu e (Classroom of the Elite)", // Duplikat judul, tapi sengaja untuk contoh
             keyword: "classroom of the elite",
             genre: "School, Psychological, Drama",
             sinopsis: "(Sinopsis sama dengan Classroom of the Elite di atas)"
@@ -374,7 +380,7 @@ function getNovelListGenreKeyboard(genre) {
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
             if (novel.genre.includes(genre)) {
-                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+                tombolNovel.push([{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]); // Menggunakan judul novel langsung di callback_data
             }
         });
     }
@@ -431,7 +437,7 @@ function getMenuNovelKeyboard() {
 
 function getNovelListKeyboard(huruf) {
     let novels = daftarNovel[huruf] || [];
-    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]);
+    let tombolNovel = novels.map(novel => [{ text: novel.judul, callback_data: "novel_page_" + novel.judul }]); // Menggunakan judul novel langsung di callback_data
     tombolNovel.push([{ text: "Kembali ke Menu Daftar Novel 📚", callback_data: "daftar_novel" }]); // Tombol kembali ke menu novel A-Z
     return { inline_keyboard: tombolNovel };
 }
