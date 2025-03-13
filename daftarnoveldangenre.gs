@@ -1137,7 +1137,7 @@ function getUniqueGenres() {
 // Fungsi untuk membuat keyboard menu genre dengan pagination
 function getMenuGenreKeyboard(page = 1) {
     let genres = getUniqueGenres();
-    const genresPerPage = 15;
+    const genresPerPage = 10;
     const start = (page - 1) * genresPerPage;
     const end = start + genresPerPage;
     const paginatedGenres = genres.slice(start, end);
@@ -1284,7 +1284,7 @@ function getNovelListKeyboard(huruf, page = 1) {
     return { inline_keyboard: tombolNovel };
 }
 
-function getNovelPageKeyboard(judulNovel) {
+function getNovelPageKeyboard(judulNovel, menuSebelumnya) { // MODIFIED: Menerima parameter menuSebelumnya
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1301,10 +1301,7 @@ function getNovelPageKeyboard(judulNovel) {
                 { text: "Telusuri Berkas 🔮", switch_inline_query_current_chat: novel.keyword }
             ],
             [
-                { text: "Kembali ke Daftar Novel 📚", callback_data: "daftar_novel" }
-            ],
-             [
-                { text: "Kembali ke Menu Daftar Genre 🎭", callback_data: "daftar_genre" }
+                { text: "Kembali", callback_data: menuSebelumnya } // MODIFIED: Tombol Kembali tunggal dan dinamis
             ]
         ]
     };
@@ -1348,7 +1345,7 @@ function showNovelListGenrePage(chatId, messageId, genre, page = 1) {
 }
 
 
-function showNovelPage(chatId, messageId, judulNovel) {
+function showNovelPage(chatId, messageId, judulNovel, menuSebelumnya) { // MODIFIED: Menerima parameter menuSebelumnya
     let novel = null;
     for (const huruf in daftarNovel) {
         novel = daftarNovel[huruf].find(n => n.judul === judulNovel);
@@ -1361,13 +1358,13 @@ function showNovelPage(chatId, messageId, judulNovel) {
     }
 
     let novelText = `<b>📚 ${novel.judul} 🖤</b>\n\n<b>Genre 📜:</b> ${novel.genre}\n\n<b>Sinopsis 📜:</b> ${novel.sinopsis}\n\n<i>Jejak kisah dalam kehampaan digital... 🥀</i>`;
-    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel)));
+    editMessageText(chatId, messageId, novelText, JSON.stringify(getNovelPageKeyboard(judulNovel, menuSebelumnya))); // MODIFIED: Meneruskan menuSebelumnya
 }
 
 
 function cleanUpNovelTitles() {
     const specialCharsRegex = /[~!@#$%^&*()_+{}\[\]:;"'<>,.?/\\|`-]/g;
-    const maxLength = 30;
+    const maxLength = 50;
 
     for (const huruf in daftarNovel) {
         daftarNovel[huruf].forEach(novel => {
